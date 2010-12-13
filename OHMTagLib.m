@@ -20,6 +20,7 @@
 		reader.delegate = self;
 		_readers = [NSArray arrayWithObjects:reader, nil];
 		[reader release];
+		NSLog(@"OHMTagLib init!");
 	}
 	return self;
 }

@@ -6,7 +6,7 @@
 //  Copyright 2010 OHM Interactive. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 
 @protocol OHMTagLibDelegate
