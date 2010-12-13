@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6153D53412B62D9900820448 /* OHMTagLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 6153D53212B62D9900820448 /* OHMTagLib.h */; };
+		6153D53512B62D9900820448 /* OHMTagLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6153D53312B62D9900820448 /* OHMTagLib.m */; };
+		6153D53C12B62E0800820448 /* ID3v2.h in Headers */ = {isa = PBXBuildFile; fileRef = 6153D53A12B62E0800820448 /* ID3v2.h */; };
+		6153D53D12B62E0800820448 /* ID3v2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6153D53B12B62E0800820448 /* ID3v2.m */; };
+		6153D53F12B62E4900820448 /* OHMTagLibReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 6153D53E12B62E4900820448 /* OHMTagLibReader.h */; };
+		6153D54212B62F6000820448 /* OHMTagLibMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 6153D54012B62F6000820448 /* OHMTagLibMetadata.h */; };
+		6153D54312B62F6000820448 /* OHMTagLibMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 6153D54112B62F6000820448 /* OHMTagLibMetadata.m */; };
+		6153D59512B634A400820448 /* clitest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6153D59412B634A400820448 /* clitest.m */; };
+		6153D59F12B6359000820448 /* libOHMTagLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libOHMTagLib.a */; };
+		6153D5A112B6359800820448 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6153D5A012B6359800820448 /* Foundation.framework */; };
+		6153D6C212B63E1B00820448 /* xmms2_id3v2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6153D6B512B63D4F00820448 /* xmms2_id3v2.m */; };
+		6153D6C412B63E2600820448 /* xmms2_id3v2.h in Headers */ = {isa = PBXBuildFile; fileRef = 6153D6B412B63D4F00820448 /* xmms2_id3v2.h */; };
+		AA747D9F0F9514B9006C5449 /* OHMTagLib_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* OHMTagLib_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6153D59012B6345E00820448 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* OHMTagLib */;
+			remoteInfo = OHMTagLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6153D53212B62D9900820448 /* OHMTagLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLib.h; sourceTree = "<group>"; };
+		6153D53312B62D9900820448 /* OHMTagLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHMTagLib.m; sourceTree = "<group>"; };
+		6153D53A12B62E0800820448 /* ID3v2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ID3v2.h; sourceTree = "<group>"; };
+		6153D53B12B62E0800820448 /* ID3v2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ID3v2.m; sourceTree = "<group>"; };
+		6153D53E12B62E4900820448 /* OHMTagLibReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLibReader.h; sourceTree = "<group>"; };
+		6153D54012B62F6000820448 /* OHMTagLibMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLibMetadata.h; sourceTree = "<group>"; };
+		6153D54112B62F6000820448 /* OHMTagLibMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHMTagLibMetadata.m; sourceTree = "<group>"; };
+		6153D59412B634A400820448 /* clitest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = clitest.m; path = clitest/clitest.m; sourceTree = "<group>"; };
+		6153D5A012B6359800820448 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6153D67F12B63A4F00820448 /* OHMTagLibDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLibDelegate.h; sourceTree = "<group>"; };
+		6153D6B412B63D4F00820448 /* xmms2_id3v2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmms2_id3v2.h; sourceTree = "<group>"; };
+		6153D6B512B63D4F00820448 /* xmms2_id3v2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xmms2_id3v2.m; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* OHMTagLib_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLib_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libOHMTagLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOHMTagLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6153D58C12B6345600820448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6153D59F12B6359000820448 /* libOHMTagLib.a in Frameworks */,
+				6153D5A112B6359800820448 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libOHMTagLib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* OHMTagLib */ = {
+			isa = PBXGroup;
+			children = (
+				6153D59212B6347900820448 /* CLITest */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				6153D5A012B6359800820448 /* Foundation.framework */,
+			);
+			name = OHMTagLib;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6153D54012B62F6000820448 /* OHMTagLibMetadata.h */,
+				6153D54112B62F6000820448 /* OHMTagLibMetadata.m */,
+				6153D53912B62DFA00820448 /* ID3v2 */,
+				6153D53212B62D9900820448 /* OHMTagLib.h */,
+				6153D53312B62D9900820448 /* OHMTagLib.m */,
+				6153D53E12B62E4900820448 /* OHMTagLibReader.h */,
+				6153D67F12B63A4F00820448 /* OHMTagLibDelegate.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* OHMTagLib_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		6153D53912B62DFA00820448 /* ID3v2 */ = {
+			isa = PBXGroup;
+			children = (
+				6153D53A12B62E0800820448 /* ID3v2.h */,
+				6153D53B12B62E0800820448 /* ID3v2.m */,
+				6153D6B412B63D4F00820448 /* xmms2_id3v2.h */,
+				6153D6B512B63D4F00820448 /* xmms2_id3v2.m */,
+			);
+			name = ID3v2;
+			sourceTree = "<group>";
+		};
+		6153D59212B6347900820448 /* CLITest */ = {
+			isa = PBXGroup;
+			children = (
+				6153D59412B634A400820448 /* clitest.m */,
+			);
+			name = CLITest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* OHMTagLib_Prefix.pch in Headers */,
+				6153D53412B62D9900820448 /* OHMTagLib.h in Headers */,
+				6153D53C12B62E0800820448 /* ID3v2.h in Headers */,
+				6153D53F12B62E4900820448 /* OHMTagLibReader.h in Headers */,
+				6153D54212B62F6000820448 /* OHMTagLibMetadata.h in Headers */,
+				6153D6C412B63E2600820448 /* xmms2_id3v2.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6153D58D12B6345600820448 /* clitest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6153D59312B6347900820448 /* Build configuration list for PBXNativeTarget "clitest" */;
+			buildPhases = (
+				6153D58B12B6345600820448 /* Sources */,
+				6153D58C12B6345600820448 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6153D59112B6345E00820448 /* PBXTargetDependency */,
+			);
+			name = clitest;
+			productName = clitest;
+			productType = "com.apple.product-type.tool";
+		};
+		D2AAC07D0554694100DB518D /* OHMTagLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "OHMTagLib" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OHMTagLib;
+			productName = OHMTagLib;
+			productReference = D2AAC07E0554694100DB518D /* libOHMTagLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "OHMTagLib" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* OHMTagLib */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* OHMTagLib */,
+				6153D58D12B6345600820448 /* clitest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6153D58B12B6345600820448 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6153D59512B634A400820448 /* clitest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6153D53512B62D9900820448 /* OHMTagLib.m in Sources */,
+				6153D53D12B62E0800820448 /* ID3v2.m in Sources */,
+				6153D54312B62F6000820448 /* OHMTagLibMetadata.m in Sources */,
+				6153D6C212B63E1B00820448 /* xmms2_id3v2.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6153D59112B6345E00820448 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* OHMTagLib */;
+			targetProxy = 6153D59012B6345E00820448 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/OHMTagLib.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OHMTagLib_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = OHMTagLib;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/OHMTagLib.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OHMTagLib_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = OHMTagLib;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6153D58E12B6345600820448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = clitest;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6153D58F12B6345600820448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = clitest;
+				SDKROOT = macosx;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "OHMTagLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "OHMTagLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6153D59312B6347900820448 /* Build configuration list for PBXNativeTarget "clitest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6153D58E12B6345600820448 /* Debug */,
+				6153D58F12B6345600820448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

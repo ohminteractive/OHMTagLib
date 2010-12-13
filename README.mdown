@@ -1,0 +1,15 @@
+== Introduction ==
+OHMTagLib is a tag reading library for iOS/MacOSX.
+It reads tags from media formats such as MP3 and M4A.
+
+== COPYRIGHT ==
+The library is under the LGPLv2.1 license.
+
+== TODO ==
+Lot's...
+
+* M4A support
+* ID3v1 support
+* OGG/VORBIS support?
+
+
