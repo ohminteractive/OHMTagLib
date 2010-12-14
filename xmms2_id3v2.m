@@ -196,7 +196,7 @@ handle_id3v2_text (OHMTagLibMetadata *entry, xmms_id3v2_header_t *head,
 		}
 		i++;
 	}
-	NSLog (@"Unhandled tag %c%c%c%c", (type >> 24) & 0xff, (type >> 16) & 0xff, (type >> 8) & 0xff, (type) & 0xff);
+	//NSLog (@"Unhandled tag %c%c%c%c", (type >> 24) & 0xff, (type >> 16) & 0xff, (type >> 8) & 0xff, (type) & 0xff);
 }
 
 

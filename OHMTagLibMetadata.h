@@ -15,11 +15,11 @@
 	NSNumber *partofset;
 }
 
-@property (assign, nonatomic) NSString *artist;
-@property (assign, nonatomic) NSString *album;
-@property (assign, nonatomic) NSString *title;
-@property (assign, nonatomic) NSString *year;
-@property (assign, nonatomic) NSNumber *tracknr;
-@property (assign, nonatomic) NSNumber *partofset;
+@property (retain, nonatomic) NSString *artist;
+@property (retain, nonatomic) NSString *album;
+@property (retain, nonatomic) NSString *title;
+@property (retain, nonatomic) NSString *year;
+@property (retain, nonatomic) NSNumber *tracknr;
+@property (retain, nonatomic) NSNumber *partofset;
 
 @end
