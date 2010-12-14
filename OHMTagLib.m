@@ -18,8 +18,7 @@
 	if (self = [super init]) {
 		ID3v2 *reader = [ID3v2 new];
 		reader.delegate = self;
-		_readers = [NSArray arrayWithObjects:reader, nil];
-		[reader release];
+		_readers = [[NSArray alloc] initWithObjects:reader, nil];
 		NSLog(@"OHMTagLib init!");
 	}
 	return self;
@@ -27,7 +26,7 @@
 
 -(BOOL)canHandleData:(NSData*)data
 {
-	for (id<OHMTagLibReader> reader in _readers) {
+	for (id reader in _readers) {
 		if ([reader isMine:data]) {
 			return YES;
 		}
