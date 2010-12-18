@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "OHMTagLibReader.h"
+#import "OHMTagLibMetadataRequest.h"
 
 @interface ID3v2 : NSObject<OHMTagLibReader> {
-	NSData *data;
-	id delegate;
+	OHMTagLibMetadataRequest *request;
+	NSString *name;
 }
 
 @end

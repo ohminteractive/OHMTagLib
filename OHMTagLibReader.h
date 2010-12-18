@@ -8,21 +8,17 @@
 
 #import "OHMTagLibMetadata.h"
 
-@protocol OHMTagLibReaderDelegate
+@protocol OHMTagLibReader;
 
--(NSData*)needMoreData:(NSInteger)bytes;
-
-@end
-
+#import "OHMTagLibMetadataRequest.h"
 
 @protocol OHMTagLibReader
 
 /* pass at least 10 bytes for mp3 files */
--(BOOL)isMine:(NSData*)data;
--(OHMTagLibMetadata*)parse;
--(NSString*)name;
++(BOOL)isMine:(NSData*)data;
+-(OHMTagLibMetadata*)parse:(NSError**)error;
 
-@property (assign, nonatomic) id<OHMTagLibReaderDelegate>delegate;
-@property (assign, nonatomic) NSData *data;
+@property (retain, nonatomic) OHMTagLibMetadataRequest *request;
+@property (readonly, nonatomic) NSString *name;
 
 @end

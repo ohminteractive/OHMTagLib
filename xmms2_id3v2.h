@@ -26,4 +26,4 @@ typedef struct xmms_id3v2_header_St {
 } xmms_id3v2_header_t;
 
 BOOL xmms_id3v2_is_header (unsigned char *buf, xmms_id3v2_header_t *header);
-BOOL xmms_id3v2_parse (OHMTagLibMetadata *entry, unsigned char *buf, xmms_id3v2_header_t *head);
+BOOL xmms_id3v2_parse (OHMTagLibMetadata *entry, unsigned char *buf, xmms_id3v2_header_t *head, NSError **error);

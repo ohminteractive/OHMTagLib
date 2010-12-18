@@ -16,9 +16,8 @@
 -(id) init
 {
 	if (self = [super init]) {
-		ID3v2 *reader = [ID3v2 new];
-		reader.delegate = self;
-		_readers = [[NSArray alloc] initWithObjects:reader, nil];
+		_readers = [[NSArray alloc] initWithObjects:[ID3v2 class], nil];
+		_operationQueue = [NSOperationQueue new];
 		NSLog(@"OHMTagLib init!");
 	}
 	return self;
@@ -26,7 +25,7 @@
 
 -(BOOL)canHandleData:(NSData*)data
 {
-	for (id reader in _readers) {
+	for (Class reader in _readers) {
 		if ([reader isMine:data]) {
 			return YES;
 		}
@@ -34,21 +33,16 @@
 	return NO;
 }
 
--(OHMTagLibMetadata*)getMetadataFromData:(NSData*)data
+-(void)addMetadataRequest:(OHMTagLibMetadataRequest*)request
 {
-	for (id<OHMTagLibReader> reader in _readers) {
-		if ([reader isMine:data]) {
-			NSLog(@"Reader %@ is handling this data", [reader name]);
-			reader.data = data;
-			return [reader parse];
+	for (Class reader in _readers) {
+		if ([reader isMine:request.data]) {
+			id r = [reader new];
+			request.reader = r;
+			[request parseMetadata];
+			return;
 		}
 	}
-	return nil;
-}
-
--(NSData*)needMoreData:(NSInteger)bytes
-{
-	return [delegate needMoreData:bytes];
 }
 
 -(void)dealloc

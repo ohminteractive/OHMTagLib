@@ -11,6 +11,5 @@
 
 @protocol OHMTagLibDelegate
 
--(NSData*)needMoreData:(NSInteger)lenght;
 
 @end

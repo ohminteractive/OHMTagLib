@@ -11,14 +11,17 @@
 #import "OHMTagLibMetadata.h"
 #import "OHMTagLibDelegate.h"
 #import "OHMTagLibReader.h"
+#import "OHMTagLibMetadataRequest.h"
 
-@interface OHMTagLib : NSObject<OHMTagLibReaderDelegate> {
-	NSArray *_readers;
+@interface OHMTagLib : NSObject {
 	id delegate;
+@private
+	NSOperationQueue *_operationQueue;
+	NSArray *_readers;
 }
 
 -(BOOL)canHandleData:(NSData *)data;
--(OHMTagLibMetadata*)getMetadataFromData:(NSData *)data;
+-(void)addMetadataRequest:(OHMTagLibMetadataRequest*)request;
 
 @property (assign, nonatomic) id<OHMTagLibDelegate> delegate;
 
