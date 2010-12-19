@@ -48,15 +48,19 @@
 		*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorPropertyNotSet userInfo:dict];
 		return nil;
 	}
+	
+	if ([request.data length] < 10) {
+		[request needMoreData:10 - [request.data length]];
+		return nil;
+	}
 
 	xmms_id3v2_header_t header;
 	unsigned char header_data[10];
 	[request.data getBytes:&header_data length:10];
 	
 	if (xmms_id3v2_is_header (header_data, &header)) {
-		if ([request.data length] < header.len) {
-			NSLog(@"Need more data! missing %d bytes", header.len - [request.data length]);
-			[request needMoreData:header.len - [request.data length]];
+		if ([request.data length] < (header.len + 10)) {
+			[request needMoreData:(header.len + 10) - [request.data length]];
 			return nil; /* you need to call me again ... */
 		} else {
 			OHMTagLibMetadata *metadata = [[OHMTagLibMetadata alloc] init];

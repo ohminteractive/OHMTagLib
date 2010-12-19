@@ -118,7 +118,6 @@ handle_int_field (OHMTagLibMetadata *entry, xmms_id3v2_header_t *head,
 	NSString *tmpStr = [[NSString alloc] initWithData:tmpData encoding:enc];
 	
 	if (tmpStr) {
-		NSLog(@"Setting %@ to %d", key, [tmpStr intValue]);
 		[entry setValue:[NSNumber numberWithInt:[tmpStr intValue]] forKey:key];
 	}
 	
@@ -167,7 +166,6 @@ add_to_entry (OHMTagLibMetadata *entry,
 	NSData *tmpData = [NSData dataWithBytes:&val[1] length:len-1];
 	nval = [[NSString alloc] initWithData:tmpData encoding:enc];
 	
-	NSLog(@"Setting %@ to %@", key, nval);
 	[entry setValue:nval forKey:key];
 	
 	[nval release];
