@@ -8,6 +8,7 @@
 
 #import "OHMTagLib.h"
 #import "ID3v2.h"
+#import "MP4.h"
 
 @implementation OHMTagLib
 
@@ -16,7 +17,7 @@
 -(id) init
 {
 	if (self = [super init]) {
-		_readers = [[NSArray alloc] initWithObjects:[ID3v2 class], nil];
+		_readers = [[NSArray alloc] initWithObjects:[ID3v2 class], [MP4 class], nil];
 		_operationQueue = [NSOperationQueue new];
 		NSLog(@"OHMTagLib init!");
 	}

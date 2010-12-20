@@ -8,7 +8,7 @@
 
 #import "OHMTagLib.h"
 
-@interface MyTest : NSObject<OHMTagLibDelegate>
+@interface MyTest : NSObject<OHMTagLibMetadataRequestDelegate>
 @end
 
 @implementation MyTest
@@ -16,18 +16,27 @@
 -(void)test:(NSData*)data
 {
 	OHMTagLib *taglib = [OHMTagLib new];
-	taglib.delegate = self;
+	OHMTagLibMetadataRequest *req = [OHMTagLibMetadataRequest new];
+	req.data = data;
+	req.delegate = self;
+	[taglib addMetadataRequest:req];
 	
-	if ([taglib canHandleData:data]) {
-		OHMTagLibMetadata *md = [taglib getMetadataFromData:data];
-	} else {
-		NSLog(@"can't handle this!");
-	}
 }
 
--(NSData*)needMoreData:(NSInteger)lenght
+-(void)metadataRequest:(OHMTagLibMetadataRequest *)request gotMetadata:(OHMTagLibMetadata *)metadata
 {
-	return nil;
+	NSLog(@"We have new metadata!");
+	NSLog(@"artist = %@ | album = %@ | title = %@", metadata.artist, metadata.album, metadata.title);
+}
+
+-(void)metadataRequest:(OHMTagLibMetadataRequest *)request parserError:(NSError *)error
+{
+	NSLog(@"Error when parsing metadata! %@", [error localizedDescription]);
+}
+
+-(void)metadataRequest:(OHMTagLibMetadataRequest *)request needMoreData:(int)bytes
+{
+	NSLog(@"metadata needs more data: %d!", bytes);
 }
 
 @end

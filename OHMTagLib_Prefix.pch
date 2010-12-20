@@ -1,0 +1,11 @@
+//
+//  OHMTagLib_Prefix.pch
+//  OHMTagLib
+//
+//  Created by Tobias Hieta on 2010-12-20.
+//  Copyright 2010 Purple Scout. All rights reserved.
+//
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#endif

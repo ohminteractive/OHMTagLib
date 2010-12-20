@@ -19,7 +19,21 @@
 		6153D5A112B6359800820448 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6153D5A012B6359800820448 /* Foundation.framework */; };
 		6153D6C212B63E1B00820448 /* xmms2_id3v2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6153D6B512B63D4F00820448 /* xmms2_id3v2.m */; };
 		6153D6C412B63E2600820448 /* xmms2_id3v2.h in Headers */ = {isa = PBXBuildFile; fileRef = 6153D6B412B63D4F00820448 /* xmms2_id3v2.h */; };
-		AA747D9F0F9514B9006C5449 /* OHMTagLib_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* OHMTagLib_Prefix.pch */; };
+		6186466112BF1FE6008A71DF /* OHMTagLibMetadataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186465E12BF1FE6008A71DF /* OHMTagLibMetadataRequest.m */; };
+		6186466212BF1FE6008A71DF /* OHMTagLibMetadataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186465F12BF1FE6008A71DF /* OHMTagLibMetadataRequest.h */; };
+		6186466312BF1FE6008A71DF /* OHMTagLibErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186466012BF1FE6008A71DF /* OHMTagLibErrorCodes.h */; };
+		6186466D12BF212A008A71DF /* OHMTagLib_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6186466C12BF212A008A71DF /* OHMTagLib_Prefix.pch */; };
+		6186468912BF23B3008A71DF /* mp4atom.c in Sources */ = {isa = PBXBuildFile; fileRef = 6186467F12BF23B3008A71DF /* mp4atom.c */; };
+		6186468A12BF23B3008A71DF /* mp4ff.c in Sources */ = {isa = PBXBuildFile; fileRef = 6186468012BF23B3008A71DF /* mp4ff.c */; };
+		6186468B12BF23B3008A71DF /* mp4ff.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186468112BF23B3008A71DF /* mp4ff.h */; };
+		6186468C12BF23B3008A71DF /* mp4ff_int_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186468212BF23B3008A71DF /* mp4ff_int_types.h */; };
+		6186468D12BF23B3008A71DF /* mp4ffint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186468312BF23B3008A71DF /* mp4ffint.h */; };
+		6186468E12BF23B3008A71DF /* mp4meta.c in Sources */ = {isa = PBXBuildFile; fileRef = 6186468412BF23B3008A71DF /* mp4meta.c */; };
+		6186468F12BF23B3008A71DF /* mp4sample.c in Sources */ = {isa = PBXBuildFile; fileRef = 6186468512BF23B3008A71DF /* mp4sample.c */; };
+		6186469012BF23B3008A71DF /* mp4tagupdate.c in Sources */ = {isa = PBXBuildFile; fileRef = 6186468612BF23B3008A71DF /* mp4tagupdate.c */; };
+		6186469112BF23B3008A71DF /* mp4util.c in Sources */ = {isa = PBXBuildFile; fileRef = 6186468712BF23B3008A71DF /* mp4util.c */; };
+		6186469812BF23DA008A71DF /* MP4.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186469612BF23DA008A71DF /* MP4.h */; };
+		6186469912BF23DA008A71DF /* MP4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186469712BF23DA008A71DF /* MP4.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +60,21 @@
 		6153D67F12B63A4F00820448 /* OHMTagLibDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLibDelegate.h; sourceTree = "<group>"; };
 		6153D6B412B63D4F00820448 /* xmms2_id3v2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmms2_id3v2.h; sourceTree = "<group>"; };
 		6153D6B512B63D4F00820448 /* xmms2_id3v2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xmms2_id3v2.m; sourceTree = "<group>"; };
-		AA747D9E0F9514B9006C5449 /* OHMTagLib_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLib_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		6186465E12BF1FE6008A71DF /* OHMTagLibMetadataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHMTagLibMetadataRequest.m; sourceTree = "<group>"; };
+		6186465F12BF1FE6008A71DF /* OHMTagLibMetadataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLibMetadataRequest.h; sourceTree = "<group>"; };
+		6186466012BF1FE6008A71DF /* OHMTagLibErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLibErrorCodes.h; sourceTree = "<group>"; };
+		6186466C12BF212A008A71DF /* OHMTagLib_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLib_Prefix.pch; sourceTree = "<group>"; };
+		6186467F12BF23B3008A71DF /* mp4atom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mp4atom.c; sourceTree = "<group>"; };
+		6186468012BF23B3008A71DF /* mp4ff.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mp4ff.c; sourceTree = "<group>"; };
+		6186468112BF23B3008A71DF /* mp4ff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mp4ff.h; sourceTree = "<group>"; };
+		6186468212BF23B3008A71DF /* mp4ff_int_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mp4ff_int_types.h; sourceTree = "<group>"; };
+		6186468312BF23B3008A71DF /* mp4ffint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mp4ffint.h; sourceTree = "<group>"; };
+		6186468412BF23B3008A71DF /* mp4meta.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mp4meta.c; sourceTree = "<group>"; };
+		6186468512BF23B3008A71DF /* mp4sample.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mp4sample.c; sourceTree = "<group>"; };
+		6186468612BF23B3008A71DF /* mp4tagupdate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mp4tagupdate.c; sourceTree = "<group>"; };
+		6186468712BF23B3008A71DF /* mp4util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mp4util.c; sourceTree = "<group>"; };
+		6186469612BF23DA008A71DF /* MP4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4.h; sourceTree = "<group>"; };
+		6186469712BF23DA008A71DF /* MP4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MP4.m; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libOHMTagLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOHMTagLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,9 +132,13 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6186467212BF2395008A71DF /* MP4 */,
+				6153D53912B62DFA00820448 /* ID3v2 */,
+				6186465E12BF1FE6008A71DF /* OHMTagLibMetadataRequest.m */,
+				6186465F12BF1FE6008A71DF /* OHMTagLibMetadataRequest.h */,
+				6186466012BF1FE6008A71DF /* OHMTagLibErrorCodes.h */,
 				6153D54012B62F6000820448 /* OHMTagLibMetadata.h */,
 				6153D54112B62F6000820448 /* OHMTagLibMetadata.m */,
-				6153D53912B62DFA00820448 /* ID3v2 */,
 				6153D53212B62D9900820448 /* OHMTagLib.h */,
 				6153D53312B62D9900820448 /* OHMTagLib.m */,
 				6153D53E12B62E4900820448 /* OHMTagLibReader.h */,
@@ -118,7 +150,7 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				AA747D9E0F9514B9006C5449 /* OHMTagLib_Prefix.pch */,
+				6186466C12BF212A008A71DF /* OHMTagLib_Prefix.pch */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -142,6 +174,32 @@
 			name = CLITest;
 			sourceTree = "<group>";
 		};
+		6186467212BF2395008A71DF /* MP4 */ = {
+			isa = PBXGroup;
+			children = (
+				6186467E12BF23B3008A71DF /* mp4ff */,
+				6186469612BF23DA008A71DF /* MP4.h */,
+				6186469712BF23DA008A71DF /* MP4.m */,
+			);
+			name = MP4;
+			sourceTree = "<group>";
+		};
+		6186467E12BF23B3008A71DF /* mp4ff */ = {
+			isa = PBXGroup;
+			children = (
+				6186467F12BF23B3008A71DF /* mp4atom.c */,
+				6186468012BF23B3008A71DF /* mp4ff.c */,
+				6186468112BF23B3008A71DF /* mp4ff.h */,
+				6186468212BF23B3008A71DF /* mp4ff_int_types.h */,
+				6186468312BF23B3008A71DF /* mp4ffint.h */,
+				6186468412BF23B3008A71DF /* mp4meta.c */,
+				6186468512BF23B3008A71DF /* mp4sample.c */,
+				6186468612BF23B3008A71DF /* mp4tagupdate.c */,
+				6186468712BF23B3008A71DF /* mp4util.c */,
+			);
+			path = mp4ff;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -149,12 +207,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA747D9F0F9514B9006C5449 /* OHMTagLib_Prefix.pch in Headers */,
 				6153D53412B62D9900820448 /* OHMTagLib.h in Headers */,
 				6153D53C12B62E0800820448 /* ID3v2.h in Headers */,
 				6153D53F12B62E4900820448 /* OHMTagLibReader.h in Headers */,
 				6153D54212B62F6000820448 /* OHMTagLibMetadata.h in Headers */,
 				6153D6C412B63E2600820448 /* xmms2_id3v2.h in Headers */,
+				6186466212BF1FE6008A71DF /* OHMTagLibMetadataRequest.h in Headers */,
+				6186466312BF1FE6008A71DF /* OHMTagLibErrorCodes.h in Headers */,
+				6186466D12BF212A008A71DF /* OHMTagLib_Prefix.pch in Headers */,
+				6186468B12BF23B3008A71DF /* mp4ff.h in Headers */,
+				6186468C12BF23B3008A71DF /* mp4ff_int_types.h in Headers */,
+				6186468D12BF23B3008A71DF /* mp4ffint.h in Headers */,
+				6186469812BF23DA008A71DF /* MP4.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +301,14 @@
 				6153D53D12B62E0800820448 /* ID3v2.m in Sources */,
 				6153D54312B62F6000820448 /* OHMTagLibMetadata.m in Sources */,
 				6153D6C212B63E1B00820448 /* xmms2_id3v2.m in Sources */,
+				6186466112BF1FE6008A71DF /* OHMTagLibMetadataRequest.m in Sources */,
+				6186468912BF23B3008A71DF /* mp4atom.c in Sources */,
+				6186468A12BF23B3008A71DF /* mp4ff.c in Sources */,
+				6186468E12BF23B3008A71DF /* mp4meta.c in Sources */,
+				6186468F12BF23B3008A71DF /* mp4sample.c in Sources */,
+				6186469012BF23B3008A71DF /* mp4tagupdate.c in Sources */,
+				6186469112BF23B3008A71DF /* mp4util.c in Sources */,
+				6186469912BF23DA008A71DF /* MP4.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +365,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -306,7 +378,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
