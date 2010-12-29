@@ -102,12 +102,14 @@ static uint32_t cb_seek_directly (void *user_data, uint64_t position)
 	mp4ff_t *mp4ff = mp4ff_open_read_metaonly (&cb);
 	
 	if (!mp4ff) {
-		NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"File doesn't contain a MP4 header!", NSLocalizedDescriptionKey, nil];
-		*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorMetadataParser userInfo:dict];
+		if (error) {
+			NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"File doesn't contain a MP4 header!", NSLocalizedDescriptionKey, nil];
+			*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorMetadataParser userInfo:dict];
+		}
 		return nil;
 	}
 	
-	OHMTagLibMetadata *metaData = [[OHMTagLibMetadata alloc] init];
+	OHMTagLibMetadata *metaData = [[[OHMTagLibMetadata alloc] init] autorelease];
 	char *tmp;
 	if (mp4ff_meta_get_artist (mp4ff, &tmp)) {
 		metaData.artist = [NSString stringWithCString:tmp encoding:NSUTF8StringEncoding];

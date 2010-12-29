@@ -39,5 +39,6 @@
 
 -(id)initWithData:(NSData*)data;
 -(void)needMoreData:(int)bytes;
+-(void)parseMetadata;
 
 @end

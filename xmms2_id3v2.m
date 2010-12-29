@@ -206,9 +206,11 @@ xmms_id3v2_parse (OHMTagLibMetadata *entry, unsigned char *buf, xmms_id3v2_heade
 	BOOL broken_version4_frame_size_hack = FALSE;
 	
 	if ((head->flags & ~ID3v2_HEADER_SUPPORTED_FLAGS) != 0) {
-		NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"ID3v2 contain unsupported flags, skipping tags!",
-							  NSLocalizedDescriptionKey, nil];
-		*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorMetadataParser userInfo:dict];
+		if (error) {
+			NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"ID3v2 contain unsupported flags, skipping tags!",
+								  NSLocalizedDescriptionKey, nil];
+			*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorMetadataParser userInfo:dict];
+		}
 		return FALSE;
 	}
 	
@@ -234,8 +236,10 @@ xmms_id3v2_parse (OHMTagLibMetadata *entry, unsigned char *buf, xmms_id3v2_heade
 		
 		if (head->ver == 3 || head->ver == 4) {
 			if ( len < 10) {
-				NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"Broken frame in ID3v2tag", NSLocalizedDescriptionKey, nil];
-				*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorMetadataParser userInfo:dict];
+				if (error) {
+					NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"Broken frame in ID3v2tag", NSLocalizedDescriptionKey, nil];
+					*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorMetadataParser userInfo:dict];
+				}
 				return FALSE;
 			}
 			
@@ -276,8 +280,10 @@ xmms_id3v2_parse (OHMTagLibMetadata *entry, unsigned char *buf, xmms_id3v2_heade
 			}
 			
 			if (size+10 > len) {
-				NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"Broken frame in ID3v2tag", NSLocalizedDescriptionKey, nil];
-				*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorMetadataParser userInfo:dict];
+				if (error) {
+					NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"Broken frame in ID3v2tag", NSLocalizedDescriptionKey, nil];
+					*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorMetadataParser userInfo:dict];
+				}
 				return FALSE;
 			}
 			
@@ -295,8 +301,10 @@ xmms_id3v2_parse (OHMTagLibMetadata *entry, unsigned char *buf, xmms_id3v2_heade
 			len -= size+10;
 		} else if (head->ver == 2) {
 			if (len < 6) {
-				NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"Broken frame in ID3v2tag", NSLocalizedDescriptionKey, nil];
-				*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorMetadataParser userInfo:dict];
+				if (error) {
+					NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"Broken frame in ID3v2tag", NSLocalizedDescriptionKey, nil];
+					*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorMetadataParser userInfo:dict];
+				}
 				return FALSE;
 			}
 			
@@ -304,8 +312,10 @@ xmms_id3v2_parse (OHMTagLibMetadata *entry, unsigned char *buf, xmms_id3v2_heade
 			size = (buf[3]<<16) | (buf[4]<<8) | buf[5];
 			
 			if (size+6 > len) {
-				NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"Broken frame in ID3v2tag", NSLocalizedDescriptionKey, nil];
-				*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorMetadataParser userInfo:dict];
+				if (error) {
+					NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"Broken frame in ID3v2tag", NSLocalizedDescriptionKey, nil];
+					*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorMetadataParser userInfo:dict];
+				}
 				return FALSE;
 			}
 			

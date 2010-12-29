@@ -25,10 +25,7 @@
 @interface MP4 : NSObject<OHMTagLibReader> {
 	OHMTagLibMetadataRequest *request;
 	NSString *name;
-	uint32_t pos;
-	
-@private
-	mp4ff_t *_mp4ff;
+	uint32_t pos;	
 }
 
 @end

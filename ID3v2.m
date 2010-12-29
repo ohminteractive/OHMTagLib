@@ -43,9 +43,11 @@
 {
 	if (!request.data) {
 		NSLog(@"Error data was not set in parse first!");
-		NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"Request was not set before parse was called", 
-							  NSLocalizedDescriptionKey, nil];
-		*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorPropertyNotSet userInfo:dict];
+		if (error) {
+			NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"Request was not set before parse was called", 
+								  NSLocalizedDescriptionKey, nil];
+			*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorPropertyNotSet userInfo:dict];
+		}
 		return nil;
 	}
 	
@@ -63,13 +65,15 @@
 			[request needMoreData:(header.len + 10) - [request.data length]];
 			return nil; /* you need to call me again ... */
 		} else {
-			OHMTagLibMetadata *metadata = [[OHMTagLibMetadata alloc] init];
+			OHMTagLibMetadata *metadata = [[[OHMTagLibMetadata alloc] init] autorelease];
 			unsigned char *buf = malloc (header.len);
 			[request.data getBytes:buf range:NSMakeRange(10, header.len)];
 			
 			NSError *parserError;
 			if (!xmms_id3v2_parse (metadata, buf, &header, &parserError)) {
-				*error = parserError;
+				if (error) {
+					*error = parserError;
+				}
 				return nil;
 			}
 			
@@ -78,8 +82,10 @@
 		
 	}
 	
-	NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"File doesn't contain a id3v2 header!", NSLocalizedDescriptionKey, nil];
-	*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorMetadataParser userInfo:dict];
+	if (error) {
+		NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"File doesn't contain a id3v2 header!", NSLocalizedDescriptionKey, nil];
+		*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorMetadataParser userInfo:dict];
+	}
 	
 	return nil;
 }
