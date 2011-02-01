@@ -13,6 +13,7 @@
 	NSString *artist, *album, *title, *year;
 	NSNumber *tracknr;
 	NSNumber *partofset;
+    BOOL isPodcast;
 }
 
 @property (retain, nonatomic) NSString *artist;
@@ -21,5 +22,6 @@
 @property (retain, nonatomic) NSString *year;
 @property (retain, nonatomic) NSNumber *tracknr;
 @property (retain, nonatomic) NSNumber *partofset;
+@property (assign, nonatomic) BOOL isPodcast;
 
 @end

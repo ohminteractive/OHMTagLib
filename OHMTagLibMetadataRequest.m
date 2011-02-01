@@ -10,68 +10,70 @@
 
 
 @implementation OHMTagLibMetadataRequest
+
 @synthesize userInfo;
 @synthesize delegate;
-@synthesize data;
+@synthesize buffer;
 @synthesize reader;
 
--(id)initWithData:(NSData *)aData
+
+-(id)init
 {
-	if (self = [super init]) {
-		self.data = aData;
-	}
-	
-	return self;
+    if ((self = [super init])) {
+        self.buffer = [OHMPositionalBuffer new];
+        buffer.sourceDelegate = self;
+    }
+    
+    return self;
 }
 
--(void)needMoreData:(int)bytes
+-(void)buffer:(OHMPositionalBuffer *)buf needMoreData:(UInt64)bytes
 {
-	if ([delegate respondsToSelector:@selector(metadataRequest:needMoreData:)]) {
-		[delegate metadataRequest:self needMoreData:bytes];
-		waitingForBytes = bytes;
-	}
+    GTMLoggerDebug(@"metadatarequest needs more data");
+    if ([delegate respondsToSelector:@selector(metadataRequest:needMoreData:)]) {
+        [delegate metadataRequest:self needMoreData:bytes];
+    }
 }
 
--(void)tryParse
+-(void)buffer:(OHMPositionalBuffer *)buf jumpToPosition:(UInt64)position
 {
-	NSError *error;
-	OHMTagLibMetadata *metaData = [reader parse:&error];
-	if (metaData) {
-		if ([delegate respondsToSelector:@selector(metadataRequest:gotMetadata:)]) {
-			[delegate metadataRequest:self gotMetadata:metaData];
-		}
-	} else if (waitingForBytes) {
-		return;
-	} else {
-		if ([delegate respondsToSelector:@selector(metadataRequest:parserError:)]) {
-			[delegate metadataRequest:self parserError:error];
-		}
-	}	
+    GTMLoggerDebug(@"metadataRequest is jumping");
+    if ([delegate respondsToSelector:@selector(metadataRequest:jumpBytes:)]) {
+        [delegate metadataRequest:self jumpBytes:position];
+    }
 }
 
--(BOOL)addMoreData:(NSData*)moreData
+-(void)reader:(id<OHMTagLibReader>)reader readerError:(NSError *)error
 {
-	[data appendData:moreData];
-	waitingForBytes -= [moreData length];
-	NSLog(@"wait %d", waitingForBytes);
-	if (waitingForBytes > 0) {
-		return NO;
-	} else {
-		[self tryParse];
-		return YES;
-	}
+    if ([delegate respondsToSelector:@selector(metadataRequest:parserError:)]) {
+        [delegate metadataRequest:self readError:error];
+    }
 }
 
--(void)parseMetadata
+-(void)reader:(id<OHMTagLibReader>)reader gotMetadata:(OHMTagLibMetadata *)metaData
+{
+    if ([delegate respondsToSelector:@selector(metadataRequest:gotMetadata:)]) {
+        [delegate metadataRequest:self gotMetadata:metaData];
+    }
+}
+
+-(void)readMetadata
 {
 	if (!reader) {
-		NSLog(@"can't find parser ...");
+		GTMLoggerDebug(@"can't find parser ...");
+        if ([delegate respondsToSelector:@selector(metadataRequest:readError:)]) {
+            NSError *err = [NSError errorWithDomain:@"se.ohminteractive.taglib.error" code:1 userInfo:nil];
+            [delegate metadataRequest:self readError:err];
+        }
+
 		return;
 	}
-	
-	self.reader.request = self;
-	
-	[self tryParse];
+    
+    /* Forward the buffer to the reader */
+    self.reader.buffer = buffer;
+    buffer.consumerDelegate = self.reader;
+    self.reader.delegate = self;
+    [self.reader readMetadata];
 }
 
 @end

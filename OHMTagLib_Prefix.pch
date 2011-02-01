@@ -6,6 +6,17 @@
 //  Copyright 2010 Purple Scout. All rights reserved.
 //
 
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iPhone SDK 3.0 and later."
+#endif
+
+
 #ifdef __OBJC__
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+
+#import "GTMLogger.h"
 #endif

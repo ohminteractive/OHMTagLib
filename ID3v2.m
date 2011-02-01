@@ -14,12 +14,17 @@
 #import "OHMTagLibErrorCodes.h"
 
 @implementation ID3v2
-@synthesize name;
-@synthesize request;
+@synthesize delegate;
+@synthesize buffer;
 
++(NSString*)name
+{
+    return @"ID3v2";
+}
 
 +(BOOL)isMine:(NSData*)tdata
 {
+    GTMLoggerDebug(@"trying data with length %d", [tdata length]);
 	if ([tdata length] < 10) {
 		return NO;
 	}
@@ -33,66 +38,90 @@
 
 -(id)init
 {
-	if (self = [super init]) {
-		name = @"id3v2";
+	if ((self = [super init])) {
 	}
 	return self;
 }
 
--(OHMTagLibMetadata*)parse:(NSError**)error
+-(void)bufferHaveMoreData:(OHMPositionalBuffer *)buf
 {
-	if (!request.data) {
-		NSLog(@"Error data was not set in parse first!");
-		if (error) {
-			NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"Request was not set before parse was called", 
-								  NSLocalizedDescriptionKey, nil];
-			*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorPropertyNotSet userInfo:dict];
-		}
-		return nil;
-	}
-	
-	if ([request.data length] < 10) {
-		[request needMoreData:10 - [request.data length]];
-		return nil;
-	}
+    /* let's do readMetadata again */
+    GTMLoggerDebug(@"in id3v2 we got more data...");
+    [self readMetadata];
+}
 
+-(void)readMetadata
+{
+    GTMLoggerDebug(@"running readMetadata in id3v2");
+	if (!buffer) {
+        NSError *error;
+		GTMLoggerDebug(@"Error data was not set in parse first!");
+        
+        NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"Request was not set before parse was called", 
+                              NSLocalizedDescriptionKey, nil];
+        error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorPropertyNotSet userInfo:dict];
+        if ([delegate respondsToSelector:@selector(reader:readerError:)]) {
+            [delegate reader:self readerError:error];
+        }
+        return;
+	}
+    
+    NSData *data = [self.buffer getDataFromCurrentPosition:10 error:nil];
+    if ([data length] < 10) {
+        GTMLoggerDebug(@"not enough data here...");
+        return; /* needMore should have been called */
+    }
+	
 	xmms_id3v2_header_t header;
 	unsigned char header_data[10];
-	[request.data getBytes:&header_data length:10];
+	[data getBytes:&header_data length:10];
 	
 	if (xmms_id3v2_is_header (header_data, &header)) {
-		if ([request.data length] < (header.len + 10)) {
-			[request needMoreData:(header.len + 10) - [request.data length]];
-			return nil; /* you need to call me again ... */
-		} else {
-			OHMTagLibMetadata *metadata = [[[OHMTagLibMetadata alloc] init] autorelease];
-			unsigned char *buf = malloc (header.len);
-			[request.data getBytes:buf range:NSMakeRange(10, header.len)];
+        
+        data = [self.buffer getDataFromCurrentPosition:header.len - 10 error:nil];
+        if ([data length] < (header.len - 10)) {
+            GTMLoggerDebug(@"not enough data when fetching the whole frame expected %d got %d", header.len -10, [data length]);
+            return;
+        }
+        
+        OHMTagLibMetadata *metadata = [[[OHMTagLibMetadata alloc] init] autorelease];
+        unsigned char *buf = malloc (header.len - 10);
+        [data getBytes:buf length:header.len - 10];
 			
-			NSError *parserError;
-			if (!xmms_id3v2_parse (metadata, buf, &header, &parserError)) {
-				if (error) {
-					*error = parserError;
-				}
-				return nil;
-			}
-			
-			return metadata;
-		}
-		
+        NSError *parserError;
+        GTMLoggerDebug(@"running parser");
+        if (!xmms_id3v2_parse (metadata, buf, &header, &parserError)) {
+            GTMLoggerDebug(@"error!");
+            if ([delegate respondsToSelector:@selector(reader:readerError:)]) {
+                [delegate reader:self readerError:parserError];
+            }
+            return;
+        }
+        
+        GTMLoggerDebug(@"done!");
+        
+        if ([delegate respondsToSelector:@selector(reader:gotMetadata:)]) {
+            [delegate reader:self gotMetadata:metadata];
+        }
+        
+        return;
 	}
-	
-	if (error) {
-		NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"File doesn't contain a id3v2 header!", NSLocalizedDescriptionKey, nil];
-		*error = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorMetadataParser userInfo:dict];
-	}
-	
-	return nil;
+    
+    NSError *_ohmError;
+    NSDictionary *_errorDict = [NSDictionary dictionaryWithObjectsAndKeys:@"No id3v2 header found! ", 
+                                NSLocalizedDescriptionKey, nil];
+    _ohmError = [NSError errorWithDomain:kOHMTagLibErrorDomain code:kOHMTagLibErrorMetadataParser userInfo:_errorDict];
+    if ([delegate respondsToSelector:@selector(reader:readerError:)]) {
+        [delegate reader:self readerError:_ohmError];
+    }
+    
+	return;
 }
 
 -(void)dealloc
 {
-	[request release];
+    [buffer release];
+    [delegate release];
 	[super dealloc];
 }
 

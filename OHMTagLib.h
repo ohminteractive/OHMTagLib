@@ -18,11 +18,13 @@
 @private
 	NSOperationQueue *_operationQueue;
 	NSArray *_readers;
+    BOOL useConcurrentSessions;
 }
 
 -(BOOL)canHandleData:(NSData *)data;
--(void)addMetadataRequest:(OHMTagLibMetadataRequest*)request;
+-(void)readMetadata:(OHMTagLibMetadataRequest*)request;
 
+@property (assign, nonatomic) BOOL useConcurrentSessions;
 @property (assign, nonatomic) id<OHMTagLibDelegate> delegate;
 
 @end

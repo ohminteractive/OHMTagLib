@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61059E5A12D47799004A7FAE /* TestPositionalBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61059E5112D4763F004A7FAE /* TestPositionalBuffer.m */; };
+		61059E6612D477BC004A7FAE /* libOHMTagLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libOHMTagLib.a */; };
+		611CEAEE12CB5C1C0000A197 /* MP4Atom.h in Headers */ = {isa = PBXBuildFile; fileRef = 611CEAEC12CB5C1C0000A197 /* MP4Atom.h */; };
+		611CEAEF12CB5C1C0000A197 /* MP4Atom.m in Sources */ = {isa = PBXBuildFile; fileRef = 611CEAED12CB5C1C0000A197 /* MP4Atom.m */; };
+		6137878B12F1A6B60080E063 /* TestOHMTagLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6137878A12F1A6B60080E063 /* TestOHMTagLib.m */; };
+		6137878C12F1AB130080E063 /* MP4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186469712BF23DA008A71DF /* MP4.m */; };
 		6153D53412B62D9900820448 /* OHMTagLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 6153D53212B62D9900820448 /* OHMTagLib.h */; };
 		6153D53512B62D9900820448 /* OHMTagLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6153D53312B62D9900820448 /* OHMTagLib.m */; };
 		6153D53C12B62E0800820448 /* ID3v2.h in Headers */ = {isa = PBXBuildFile; fileRef = 6153D53A12B62E0800820448 /* ID3v2.h */; };
@@ -16,28 +22,50 @@
 		6153D54312B62F6000820448 /* OHMTagLibMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 6153D54112B62F6000820448 /* OHMTagLibMetadata.m */; };
 		6153D59512B634A400820448 /* clitest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6153D59412B634A400820448 /* clitest.m */; };
 		6153D59F12B6359000820448 /* libOHMTagLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libOHMTagLib.a */; };
-		6153D5A112B6359800820448 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6153D5A012B6359800820448 /* Foundation.framework */; };
 		6153D6C212B63E1B00820448 /* xmms2_id3v2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6153D6B512B63D4F00820448 /* xmms2_id3v2.m */; };
 		6153D6C412B63E2600820448 /* xmms2_id3v2.h in Headers */ = {isa = PBXBuildFile; fileRef = 6153D6B412B63D4F00820448 /* xmms2_id3v2.h */; };
+		615B70D612E7FADC00D5CC34 /* testm4a.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 615B70D412E7FADC00D5CC34 /* testm4a.m4a */; };
+		615B70D712E7FADC00D5CC34 /* testmp3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 615B70D512E7FADC00D5CC34 /* testmp3.mp3 */; };
+		61630E5E12E3DD9800220C32 /* TestOHMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 61630E5D12E3DD9800220C32 /* TestOHMData.m */; };
 		6186466112BF1FE6008A71DF /* OHMTagLibMetadataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186465E12BF1FE6008A71DF /* OHMTagLibMetadataRequest.m */; };
 		6186466212BF1FE6008A71DF /* OHMTagLibMetadataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186465F12BF1FE6008A71DF /* OHMTagLibMetadataRequest.h */; };
 		6186466312BF1FE6008A71DF /* OHMTagLibErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186466012BF1FE6008A71DF /* OHMTagLibErrorCodes.h */; };
 		6186466D12BF212A008A71DF /* OHMTagLib_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6186466C12BF212A008A71DF /* OHMTagLib_Prefix.pch */; };
-		6186468912BF23B3008A71DF /* mp4atom.c in Sources */ = {isa = PBXBuildFile; fileRef = 6186467F12BF23B3008A71DF /* mp4atom.c */; };
-		6186468A12BF23B3008A71DF /* mp4ff.c in Sources */ = {isa = PBXBuildFile; fileRef = 6186468012BF23B3008A71DF /* mp4ff.c */; };
-		6186468B12BF23B3008A71DF /* mp4ff.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186468112BF23B3008A71DF /* mp4ff.h */; };
-		6186468C12BF23B3008A71DF /* mp4ff_int_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186468212BF23B3008A71DF /* mp4ff_int_types.h */; };
-		6186468D12BF23B3008A71DF /* mp4ffint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186468312BF23B3008A71DF /* mp4ffint.h */; };
-		6186468E12BF23B3008A71DF /* mp4meta.c in Sources */ = {isa = PBXBuildFile; fileRef = 6186468412BF23B3008A71DF /* mp4meta.c */; };
-		6186468F12BF23B3008A71DF /* mp4sample.c in Sources */ = {isa = PBXBuildFile; fileRef = 6186468512BF23B3008A71DF /* mp4sample.c */; };
-		6186469012BF23B3008A71DF /* mp4tagupdate.c in Sources */ = {isa = PBXBuildFile; fileRef = 6186468612BF23B3008A71DF /* mp4tagupdate.c */; };
-		6186469112BF23B3008A71DF /* mp4util.c in Sources */ = {isa = PBXBuildFile; fileRef = 6186468712BF23B3008A71DF /* mp4util.c */; };
-		6186469812BF23DA008A71DF /* MP4.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186469612BF23DA008A71DF /* MP4.h */; };
-		6186469912BF23DA008A71DF /* MP4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186469712BF23DA008A71DF /* MP4.m */; };
+		618BB70512E68FF20053CE07 /* TestMP4Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 618BB70412E68FF20053CE07 /* TestMP4Parser.m */; };
+		61B8D48812DB138300A2F63F /* OHMData.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B8D48612DB138300A2F63F /* OHMData.h */; };
+		61B8D48912DB138300A2F63F /* OHMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B8D48712DB138300A2F63F /* OHMData.m */; };
+		61B8D48A12DB138300A2F63F /* OHMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B8D48712DB138300A2F63F /* OHMData.m */; };
+		61B92C0312D0DB8700208864 /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92BF212D0DB4100208864 /* GTMUnitTestDevLog.m */; };
+		61B92C0412D0DB8700208864 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92BF412D0DB4100208864 /* GTMSenTestCase.m */; };
+		61B92C0512D0DB8700208864 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92BF612D0DB4100208864 /* GTMIPhoneUnitTestMain.m */; };
+		61B92C0612D0DB8700208864 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92BF712D0DB4100208864 /* GTMIPhoneUnitTestDelegate.m */; };
+		61B92C1012D0DBBE00208864 /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92C0B12D0DBBE00208864 /* GTMRegex.m */; };
+		61B92C1112D0DBBE00208864 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92C0D12D0DBBE00208864 /* GTMObjC2Runtime.m */; };
+		61B92C2912D0DC7F00208864 /* Test_MP4Atom.m in Sources */ = {isa = PBXBuildFile; fileRef = 611CEB2212CB6C2A0000A197 /* Test_MP4Atom.m */; };
+		61B92C4312D0DDB000208864 /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92C4012D0DDB000208864 /* GTMLogger.m */; };
+		61B92C4412D0DDB000208864 /* GTMLoggerRingBufferWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92C4212D0DDB000208864 /* GTMLoggerRingBufferWriter.m */; };
+		61B92C4512D0DDB000208864 /* GTMLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B92C3F12D0DDB000208864 /* GTMLogger.h */; };
+		61B92C4612D0DDB000208864 /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92C4012D0DDB000208864 /* GTMLogger.m */; };
+		61B92C4712D0DDB000208864 /* GTMLoggerRingBufferWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B92C4112D0DDB000208864 /* GTMLoggerRingBufferWriter.h */; };
+		61B92C4812D0DDB000208864 /* GTMLoggerRingBufferWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92C4212D0DDB000208864 /* GTMLoggerRingBufferWriter.m */; };
+		61B92C4912D0DDC400208864 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B92C1212D0DBD000208864 /* GTMDefines.h */; };
+		61B92C4A12D0DDC400208864 /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92C0B12D0DBBE00208864 /* GTMRegex.m */; };
+		61B92C4B12D0DDC400208864 /* GTMRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B92C0C12D0DBBE00208864 /* GTMRegex.h */; };
+		61C4635212D21ABF00830F36 /* OHMPositionalBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 61C4635012D21ABF00830F36 /* OHMPositionalBuffer.h */; };
+		61C4635312D21ABF00830F36 /* OHMPositionalBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4635112D21ABF00830F36 /* OHMPositionalBuffer.m */; };
+		61D8AABF12CBA673006C6A54 /* MP4Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D8AABC12CBA673006C6A54 /* MP4Parser.h */; };
+		61D8AAC012CBA673006C6A54 /* MP4Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D8AABD12CBA673006C6A54 /* MP4Parser.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		61059E6712D477BF004A7FAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = OHMTagLib;
+		};
 		6153D59012B6345E00820448 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
@@ -48,6 +76,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		61059E5012D4763F004A7FAE /* TestPositionalBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPositionalBuffer.h; sourceTree = "<group>"; };
+		61059E5112D4763F004A7FAE /* TestPositionalBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPositionalBuffer.m; sourceTree = "<group>"; };
+		611CEAEC12CB5C1C0000A197 /* MP4Atom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4Atom.h; sourceTree = "<group>"; };
+		611CEAED12CB5C1C0000A197 /* MP4Atom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MP4Atom.m; sourceTree = "<group>"; };
+		611CEB2112CB6C2A0000A197 /* Test_MP4Atom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_MP4Atom.h; path = MP4Parser/Test_MP4Atom.h; sourceTree = "<group>"; };
+		611CEB2212CB6C2A0000A197 /* Test_MP4Atom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test_MP4Atom.m; path = MP4Parser/Test_MP4Atom.m; sourceTree = "<group>"; };
+		6137878912F1A6B60080E063 /* TestOHMTagLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOHMTagLib.h; sourceTree = "<group>"; };
+		6137878A12F1A6B60080E063 /* TestOHMTagLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOHMTagLib.m; sourceTree = "<group>"; };
 		6153D53212B62D9900820448 /* OHMTagLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLib.h; sourceTree = "<group>"; };
 		6153D53312B62D9900820448 /* OHMTagLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHMTagLib.m; sourceTree = "<group>"; };
 		6153D53A12B62E0800820448 /* ID3v2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ID3v2.h; sourceTree = "<group>"; };
@@ -56,25 +92,46 @@
 		6153D54012B62F6000820448 /* OHMTagLibMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLibMetadata.h; sourceTree = "<group>"; };
 		6153D54112B62F6000820448 /* OHMTagLibMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHMTagLibMetadata.m; sourceTree = "<group>"; };
 		6153D59412B634A400820448 /* clitest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = clitest.m; path = clitest/clitest.m; sourceTree = "<group>"; };
-		6153D5A012B6359800820448 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6153D67F12B63A4F00820448 /* OHMTagLibDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLibDelegate.h; sourceTree = "<group>"; };
 		6153D6B412B63D4F00820448 /* xmms2_id3v2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmms2_id3v2.h; sourceTree = "<group>"; };
 		6153D6B512B63D4F00820448 /* xmms2_id3v2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xmms2_id3v2.m; sourceTree = "<group>"; };
+		615B70D212E7D86100D5CC34 /* MP4AtomTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4AtomTypes.h; sourceTree = "<group>"; };
+		615B70D412E7FADC00D5CC34 /* testm4a.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = testm4a.m4a; sourceTree = "<group>"; };
+		615B70D512E7FADC00D5CC34 /* testmp3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = testmp3.mp3; sourceTree = "<group>"; };
+		61630E5C12E3DD9800220C32 /* TestOHMData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOHMData.h; sourceTree = "<group>"; };
+		61630E5D12E3DD9800220C32 /* TestOHMData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOHMData.m; sourceTree = "<group>"; };
 		6186465E12BF1FE6008A71DF /* OHMTagLibMetadataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHMTagLibMetadataRequest.m; sourceTree = "<group>"; };
 		6186465F12BF1FE6008A71DF /* OHMTagLibMetadataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLibMetadataRequest.h; sourceTree = "<group>"; };
 		6186466012BF1FE6008A71DF /* OHMTagLibErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLibErrorCodes.h; sourceTree = "<group>"; };
 		6186466C12BF212A008A71DF /* OHMTagLib_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLib_Prefix.pch; sourceTree = "<group>"; };
-		6186467F12BF23B3008A71DF /* mp4atom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mp4atom.c; sourceTree = "<group>"; };
-		6186468012BF23B3008A71DF /* mp4ff.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mp4ff.c; sourceTree = "<group>"; };
-		6186468112BF23B3008A71DF /* mp4ff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mp4ff.h; sourceTree = "<group>"; };
-		6186468212BF23B3008A71DF /* mp4ff_int_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mp4ff_int_types.h; sourceTree = "<group>"; };
-		6186468312BF23B3008A71DF /* mp4ffint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mp4ffint.h; sourceTree = "<group>"; };
-		6186468412BF23B3008A71DF /* mp4meta.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mp4meta.c; sourceTree = "<group>"; };
-		6186468512BF23B3008A71DF /* mp4sample.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mp4sample.c; sourceTree = "<group>"; };
-		6186468612BF23B3008A71DF /* mp4tagupdate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mp4tagupdate.c; sourceTree = "<group>"; };
-		6186468712BF23B3008A71DF /* mp4util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mp4util.c; sourceTree = "<group>"; };
 		6186469612BF23DA008A71DF /* MP4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4.h; sourceTree = "<group>"; };
 		6186469712BF23DA008A71DF /* MP4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MP4.m; sourceTree = "<group>"; };
+		618BB70312E68FF20053CE07 /* TestMP4Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMP4Parser.h; sourceTree = "<group>"; };
+		618BB70412E68FF20053CE07 /* TestMP4Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMP4Parser.m; sourceTree = "<group>"; };
+		61B8D48612DB138300A2F63F /* OHMData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMData.h; sourceTree = "<group>"; };
+		61B8D48712DB138300A2F63F /* OHMData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHMData.m; sourceTree = "<group>"; };
+		61B92BF212D0DB4100208864 /* GTMUnitTestDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMUnitTestDevLog.m; path = "google-toolkit-for-mac/UnitTesting/GTMUnitTestDevLog.m"; sourceTree = "<group>"; };
+		61B92BF312D0DB4100208864 /* GTMUnitTestDevLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMUnitTestDevLog.h; path = "google-toolkit-for-mac/UnitTesting/GTMUnitTestDevLog.h"; sourceTree = "<group>"; };
+		61B92BF412D0DB4100208864 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSenTestCase.m; path = "google-toolkit-for-mac/UnitTesting/GTMSenTestCase.m"; sourceTree = "<group>"; };
+		61B92BF512D0DB4100208864 /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSenTestCase.h; path = "google-toolkit-for-mac/UnitTesting/GTMSenTestCase.h"; sourceTree = "<group>"; };
+		61B92BF612D0DB4100208864 /* GTMIPhoneUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMIPhoneUnitTestMain.m; path = "google-toolkit-for-mac/UnitTesting/GTMIPhoneUnitTestMain.m"; sourceTree = "<group>"; };
+		61B92BF712D0DB4100208864 /* GTMIPhoneUnitTestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMIPhoneUnitTestDelegate.m; path = "google-toolkit-for-mac/UnitTesting/GTMIPhoneUnitTestDelegate.m"; sourceTree = "<group>"; };
+		61B92BF812D0DB4100208864 /* GTMIPhoneUnitTestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMIPhoneUnitTestDelegate.h; path = "google-toolkit-for-mac/UnitTesting/GTMIPhoneUnitTestDelegate.h"; sourceTree = "<group>"; };
+		61B92BFD12D0DB6A00208864 /* UnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61B92BFF12D0DB6B00208864 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
+		61B92C0B12D0DBBE00208864 /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegex.m; path = "google-toolkit-for-mac/Foundation/GTMRegex.m"; sourceTree = "<group>"; };
+		61B92C0C12D0DBBE00208864 /* GTMRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMRegex.h; path = "google-toolkit-for-mac/Foundation/GTMRegex.h"; sourceTree = "<group>"; };
+		61B92C0D12D0DBBE00208864 /* GTMObjC2Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMObjC2Runtime.m; path = "google-toolkit-for-mac/Foundation/GTMObjC2Runtime.m"; sourceTree = "<group>"; };
+		61B92C0E12D0DBBE00208864 /* GTMObjC2Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMObjC2Runtime.h; path = "google-toolkit-for-mac/Foundation/GTMObjC2Runtime.h"; sourceTree = "<group>"; };
+		61B92C1212D0DBD000208864 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "google-toolkit-for-mac/GTMDefines.h"; sourceTree = "<group>"; };
+		61B92C3F12D0DDB000208864 /* GTMLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMLogger.h; path = "../DropPlay/google-toolkit-for-mac/Foundation/GTMLogger.h"; sourceTree = SOURCE_ROOT; };
+		61B92C4012D0DDB000208864 /* GTMLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMLogger.m; path = "../DropPlay/google-toolkit-for-mac/Foundation/GTMLogger.m"; sourceTree = SOURCE_ROOT; };
+		61B92C4112D0DDB000208864 /* GTMLoggerRingBufferWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMLoggerRingBufferWriter.h; path = "../DropPlay/google-toolkit-for-mac/Foundation/GTMLoggerRingBufferWriter.h"; sourceTree = SOURCE_ROOT; };
+		61B92C4212D0DDB000208864 /* GTMLoggerRingBufferWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMLoggerRingBufferWriter.m; path = "../DropPlay/google-toolkit-for-mac/Foundation/GTMLoggerRingBufferWriter.m"; sourceTree = SOURCE_ROOT; };
+		61C4635012D21ABF00830F36 /* OHMPositionalBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMPositionalBuffer.h; sourceTree = "<group>"; };
+		61C4635112D21ABF00830F36 /* OHMPositionalBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHMPositionalBuffer.m; sourceTree = "<group>"; };
+		61D8AABC12CBA673006C6A54 /* MP4Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4Parser.h; sourceTree = "<group>"; };
+		61D8AABD12CBA673006C6A54 /* MP4Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MP4Parser.m; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libOHMTagLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOHMTagLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,7 +142,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6153D59F12B6359000820448 /* libOHMTagLib.a in Frameworks */,
-				6153D5A112B6359800820448 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61B92BFB12D0DB6A00208864 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61059E6612D477BC004A7FAE /* libOHMTagLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				D2AAC07E0554694100DB518D /* libOHMTagLib.a */,
+				61B92BFD12D0DB6A00208864 /* UnitTests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,12 +176,14 @@
 		0867D691FE84028FC02AAC07 /* OHMTagLib */ = {
 			isa = PBXGroup;
 			children = (
+				615B70D312E7FADC00D5CC34 /* testdata */,
+				61B92BEB12D0DA7400208864 /* GTM */,
 				6153D59212B6347900820448 /* CLITest */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
-				6153D5A012B6359800820448 /* Foundation.framework */,
+				61B92BFF12D0DB6B00208864 /* UnitTests-Info.plist */,
 			);
 			name = OHMTagLib;
 			sourceTree = "<group>";
@@ -132,8 +199,9 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6186467212BF2395008A71DF /* MP4 */,
-				6153D53912B62DFA00820448 /* ID3v2 */,
+				61356CB412E67F6F00997506 /* Readers */,
+				61356CB312E67F5600997506 /* Utils */,
+				61059E4F12D47633004A7FAE /* Tests */,
 				6186465E12BF1FE6008A71DF /* OHMTagLibMetadataRequest.m */,
 				6186465F12BF1FE6008A71DF /* OHMTagLibMetadataRequest.h */,
 				6186466012BF1FE6008A71DF /* OHMTagLibErrorCodes.h */,
@@ -155,6 +223,55 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		61059E4F12D47633004A7FAE /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6137878912F1A6B60080E063 /* TestOHMTagLib.h */,
+				6137878A12F1A6B60080E063 /* TestOHMTagLib.m */,
+				611CEB2112CB6C2A0000A197 /* Test_MP4Atom.h */,
+				611CEB2212CB6C2A0000A197 /* Test_MP4Atom.m */,
+				61059E5012D4763F004A7FAE /* TestPositionalBuffer.h */,
+				61059E5112D4763F004A7FAE /* TestPositionalBuffer.m */,
+				61630E5C12E3DD9800220C32 /* TestOHMData.h */,
+				61630E5D12E3DD9800220C32 /* TestOHMData.m */,
+				618BB70312E68FF20053CE07 /* TestMP4Parser.h */,
+				618BB70412E68FF20053CE07 /* TestMP4Parser.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		611CEAEB12CB5BF70000A197 /* MP4Parser */ = {
+			isa = PBXGroup;
+			children = (
+				615B70D212E7D86100D5CC34 /* MP4AtomTypes.h */,
+				611CEAEC12CB5C1C0000A197 /* MP4Atom.h */,
+				611CEAED12CB5C1C0000A197 /* MP4Atom.m */,
+				61D8AABC12CBA673006C6A54 /* MP4Parser.h */,
+				61D8AABD12CBA673006C6A54 /* MP4Parser.m */,
+			);
+			path = MP4Parser;
+			sourceTree = "<group>";
+		};
+		61356CB312E67F5600997506 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				61C4635012D21ABF00830F36 /* OHMPositionalBuffer.h */,
+				61C4635112D21ABF00830F36 /* OHMPositionalBuffer.m */,
+				61B8D48612DB138300A2F63F /* OHMData.h */,
+				61B8D48712DB138300A2F63F /* OHMData.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		61356CB412E67F6F00997506 /* Readers */ = {
+			isa = PBXGroup;
+			children = (
+				6186467212BF2395008A71DF /* MP4 */,
+				6153D53912B62DFA00820448 /* ID3v2 */,
+			);
+			name = Readers;
+			sourceTree = "<group>";
+		};
 		6153D53912B62DFA00820448 /* ID3v2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,30 +291,46 @@
 			name = CLITest;
 			sourceTree = "<group>";
 		};
+		615B70D312E7FADC00D5CC34 /* testdata */ = {
+			isa = PBXGroup;
+			children = (
+				615B70D412E7FADC00D5CC34 /* testm4a.m4a */,
+				615B70D512E7FADC00D5CC34 /* testmp3.mp3 */,
+			);
+			path = testdata;
+			sourceTree = "<group>";
+		};
 		6186467212BF2395008A71DF /* MP4 */ = {
 			isa = PBXGroup;
 			children = (
-				6186467E12BF23B3008A71DF /* mp4ff */,
+				611CEAEB12CB5BF70000A197 /* MP4Parser */,
 				6186469612BF23DA008A71DF /* MP4.h */,
 				6186469712BF23DA008A71DF /* MP4.m */,
 			);
 			name = MP4;
 			sourceTree = "<group>";
 		};
-		6186467E12BF23B3008A71DF /* mp4ff */ = {
+		61B92BEB12D0DA7400208864 /* GTM */ = {
 			isa = PBXGroup;
 			children = (
-				6186467F12BF23B3008A71DF /* mp4atom.c */,
-				6186468012BF23B3008A71DF /* mp4ff.c */,
-				6186468112BF23B3008A71DF /* mp4ff.h */,
-				6186468212BF23B3008A71DF /* mp4ff_int_types.h */,
-				6186468312BF23B3008A71DF /* mp4ffint.h */,
-				6186468412BF23B3008A71DF /* mp4meta.c */,
-				6186468512BF23B3008A71DF /* mp4sample.c */,
-				6186468612BF23B3008A71DF /* mp4tagupdate.c */,
-				6186468712BF23B3008A71DF /* mp4util.c */,
+				61B92C3F12D0DDB000208864 /* GTMLogger.h */,
+				61B92C4012D0DDB000208864 /* GTMLogger.m */,
+				61B92C4112D0DDB000208864 /* GTMLoggerRingBufferWriter.h */,
+				61B92C4212D0DDB000208864 /* GTMLoggerRingBufferWriter.m */,
+				61B92C1212D0DBD000208864 /* GTMDefines.h */,
+				61B92C0B12D0DBBE00208864 /* GTMRegex.m */,
+				61B92C0C12D0DBBE00208864 /* GTMRegex.h */,
+				61B92C0D12D0DBBE00208864 /* GTMObjC2Runtime.m */,
+				61B92C0E12D0DBBE00208864 /* GTMObjC2Runtime.h */,
+				61B92BF212D0DB4100208864 /* GTMUnitTestDevLog.m */,
+				61B92BF312D0DB4100208864 /* GTMUnitTestDevLog.h */,
+				61B92BF412D0DB4100208864 /* GTMSenTestCase.m */,
+				61B92BF512D0DB4100208864 /* GTMSenTestCase.h */,
+				61B92BF612D0DB4100208864 /* GTMIPhoneUnitTestMain.m */,
+				61B92BF712D0DB4100208864 /* GTMIPhoneUnitTestDelegate.m */,
+				61B92BF812D0DB4100208864 /* GTMIPhoneUnitTestDelegate.h */,
 			);
-			path = mp4ff;
+			name = GTM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,10 +348,14 @@
 				6186466212BF1FE6008A71DF /* OHMTagLibMetadataRequest.h in Headers */,
 				6186466312BF1FE6008A71DF /* OHMTagLibErrorCodes.h in Headers */,
 				6186466D12BF212A008A71DF /* OHMTagLib_Prefix.pch in Headers */,
-				6186468B12BF23B3008A71DF /* mp4ff.h in Headers */,
-				6186468C12BF23B3008A71DF /* mp4ff_int_types.h in Headers */,
-				6186468D12BF23B3008A71DF /* mp4ffint.h in Headers */,
-				6186469812BF23DA008A71DF /* MP4.h in Headers */,
+				611CEAEE12CB5C1C0000A197 /* MP4Atom.h in Headers */,
+				61D8AABF12CBA673006C6A54 /* MP4Parser.h in Headers */,
+				61B92C4512D0DDB000208864 /* GTMLogger.h in Headers */,
+				61B92C4712D0DDB000208864 /* GTMLoggerRingBufferWriter.h in Headers */,
+				61B92C4912D0DDC400208864 /* GTMDefines.h in Headers */,
+				61B92C4B12D0DDC400208864 /* GTMRegex.h in Headers */,
+				61C4635212D21ABF00830F36 /* OHMPositionalBuffer.h in Headers */,
+				61B8D48812DB138300A2F63F /* OHMData.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +377,25 @@
 			name = clitest;
 			productName = clitest;
 			productType = "com.apple.product-type.tool";
+		};
+		61B92BFC12D0DB6A00208864 /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61B92C0212D0DB6B00208864 /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				61B92BF912D0DB6A00208864 /* Resources */,
+				61B92BFA12D0DB6A00208864 /* Sources */,
+				61B92BFB12D0DB6A00208864 /* Frameworks */,
+				61B92C1412D0DBF500208864 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61059E6812D477BF004A7FAE /* PBXTargetDependency */,
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = 61B92BFD12D0DB6A00208864 /* UnitTests.app */;
+			productType = "com.apple.product-type.application";
 		};
 		D2AAC07D0554694100DB518D /* OHMTagLib */ = {
 			isa = PBXNativeTarget;
@@ -263,6 +419,9 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "OHM Interactive";
+			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "OHMTagLib" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -280,9 +439,39 @@
 			targets = (
 				D2AAC07D0554694100DB518D /* OHMTagLib */,
 				6153D58D12B6345600820448 /* clitest */,
+				61B92BFC12D0DB6A00208864 /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61B92BF912D0DB6A00208864 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				615B70D612E7FADC00D5CC34 /* testm4a.m4a in Resources */,
+				615B70D712E7FADC00D5CC34 /* testmp3.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61B92C1412D0DBF500208864 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "google-toolkit-for-mac/UnitTesting/RunIPhoneUnitTest.sh";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6153D58B12B6345600820448 /* Sources */ = {
@@ -293,28 +482,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		61B92BFA12D0DB6A00208864 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61B92C0312D0DB8700208864 /* GTMUnitTestDevLog.m in Sources */,
+				61B92C0412D0DB8700208864 /* GTMSenTestCase.m in Sources */,
+				61B92C0512D0DB8700208864 /* GTMIPhoneUnitTestMain.m in Sources */,
+				61B92C0612D0DB8700208864 /* GTMIPhoneUnitTestDelegate.m in Sources */,
+				61B92C1012D0DBBE00208864 /* GTMRegex.m in Sources */,
+				61B92C1112D0DBBE00208864 /* GTMObjC2Runtime.m in Sources */,
+				61B92C2912D0DC7F00208864 /* Test_MP4Atom.m in Sources */,
+				61B92C4312D0DDB000208864 /* GTMLogger.m in Sources */,
+				61B92C4412D0DDB000208864 /* GTMLoggerRingBufferWriter.m in Sources */,
+				61059E5A12D47799004A7FAE /* TestPositionalBuffer.m in Sources */,
+				61B8D48A12DB138300A2F63F /* OHMData.m in Sources */,
+				61630E5E12E3DD9800220C32 /* TestOHMData.m in Sources */,
+				618BB70512E68FF20053CE07 /* TestMP4Parser.m in Sources */,
+				6137878B12F1A6B60080E063 /* TestOHMTagLib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07B0554694100DB518D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6137878C12F1AB130080E063 /* MP4.m in Sources */,
 				6153D53512B62D9900820448 /* OHMTagLib.m in Sources */,
 				6153D53D12B62E0800820448 /* ID3v2.m in Sources */,
 				6153D54312B62F6000820448 /* OHMTagLibMetadata.m in Sources */,
 				6153D6C212B63E1B00820448 /* xmms2_id3v2.m in Sources */,
 				6186466112BF1FE6008A71DF /* OHMTagLibMetadataRequest.m in Sources */,
-				6186468912BF23B3008A71DF /* mp4atom.c in Sources */,
-				6186468A12BF23B3008A71DF /* mp4ff.c in Sources */,
-				6186468E12BF23B3008A71DF /* mp4meta.c in Sources */,
-				6186468F12BF23B3008A71DF /* mp4sample.c in Sources */,
-				6186469012BF23B3008A71DF /* mp4tagupdate.c in Sources */,
-				6186469112BF23B3008A71DF /* mp4util.c in Sources */,
-				6186469912BF23DA008A71DF /* MP4.m in Sources */,
+				611CEAEF12CB5C1C0000A197 /* MP4Atom.m in Sources */,
+				61D8AAC012CBA673006C6A54 /* MP4Parser.m in Sources */,
+				61B92C4612D0DDB000208864 /* GTMLogger.m in Sources */,
+				61B92C4812D0DDB000208864 /* GTMLoggerRingBufferWriter.m in Sources */,
+				61B92C4A12D0DDC400208864 /* GTMRegex.m in Sources */,
+				61C4635312D21ABF00830F36 /* OHMPositionalBuffer.m in Sources */,
+				61B8D48912DB138300A2F63F /* OHMData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		61059E6812D477BF004A7FAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* OHMTagLib */;
+			targetProxy = 61059E6712D477BF004A7FAE /* PBXContainerItemProxy */;
+		};
 		6153D59112B6345E00820448 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D2AAC07D0554694100DB518D /* OHMTagLib */;
@@ -361,11 +577,13 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -374,11 +592,12 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
@@ -430,6 +649,55 @@
 			};
 			name = Release;
 		};
+		61B92C0012D0DB6B00208864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "UnitTests-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTests;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		61B92C0112D0DB6B00208864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "UnitTests-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTests;
+				SDKROOT = iphoneos;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -456,6 +724,15 @@
 			buildConfigurations = (
 				6153D58E12B6345600820448 /* Debug */,
 				6153D58F12B6345600820448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61B92C0212D0DB6B00208864 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61B92C0012D0DB6B00208864 /* Debug */,
+				61B92C0112D0DB6B00208864 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

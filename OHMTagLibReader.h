@@ -7,18 +7,31 @@
 //
 
 #import "OHMTagLibMetadata.h"
+#import "OHMPositionalBuffer.h"
 
 @protocol OHMTagLibReader;
 
-#import "OHMTagLibMetadataRequest.h"
+@class OHMTagLibMetadataRequest;
 
-@protocol OHMTagLibReader
+@protocol OHMTagLibReaderDelegate <NSObject>
+
+-(void)reader:(id<OHMTagLibReader>)reader readerError:(NSError*)error;
+-(void)reader:(id<OHMTagLibReader>)reader gotMetadata:(OHMTagLibMetadata*)metaData;
+
+@end
+
+@protocol OHMTagLibReader <OHMPositionalBufferConsumerDelegate>
+
++(NSString*)name;
 
 /* pass at least 10 bytes for mp3 files */
 +(BOOL)isMine:(NSData*)data;
--(OHMTagLibMetadata*)parse:(NSError**)error;
 
-@property (retain, nonatomic) OHMTagLibMetadataRequest *request;
-@property (readonly, nonatomic) NSString *name;
+/* before calling anything here we need to set the buffer delegate
+   otherwise it will error out */
+-(void)readMetadata;
+
+@property (nonatomic, retain) OHMPositionalBuffer *buffer;
+@property (nonatomic, retain) id<OHMTagLibReaderDelegate> delegate;
 
 @end

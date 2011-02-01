@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "OHMTagLibMetadata.h"
+#import "OHMPositionalBuffer.h"
 
 @class OHMTagLibMetadataRequest;
 
@@ -16,29 +17,30 @@
 @protocol OHMTagLibMetadataRequestDelegate
 
 -(void)metadataRequest:(OHMTagLibMetadataRequest*)request needMoreData:(int)bytes;
+-(void)metadataRequest:(OHMTagLibMetadataRequest*)request jumpBytes:(int)bytes;
 -(void)metadataRequest:(OHMTagLibMetadataRequest*)request gotMetadata:(OHMTagLibMetadata*)metadata;
--(void)metadataRequest:(OHMTagLibMetadataRequest*)request parserError:(NSError*)error;
+-(void)metadataRequest:(OHMTagLibMetadataRequest*)request readError:(NSError*)error;
 
 @end
 
 
-@interface OHMTagLibMetadataRequest : NSObject {
+@interface OHMTagLibMetadataRequest : NSObject<OHMPositionalBufferSourceDelegate,OHMTagLibReaderDelegate> {
 	id userInfo;
 	id delegate;
-	NSMutableData *data;
-	id reader;
+    OHMPositionalBuffer *buffer;
+	id<OHMTagLibReader> reader;
 	
 @private
 	int waitingForBytes;
 }
 
 @property (nonatomic, retain) id userInfo;
+@property (nonatomic, retain) OHMPositionalBuffer *buffer;
+
 @property (nonatomic, retain) id<OHMTagLibMetadataRequestDelegate> delegate;
-@property (nonatomic, retain) NSData *data;
 @property (nonatomic, retain) id<OHMTagLibReader> reader;
 
--(id)initWithData:(NSData*)data;
--(void)needMoreData:(int)bytes;
--(void)parseMetadata;
+-(id)init;
+-(void)readMetadata;
 
 @end

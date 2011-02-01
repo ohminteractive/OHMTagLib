@@ -25,18 +25,18 @@
 
 -(void)metadataRequest:(OHMTagLibMetadataRequest *)request gotMetadata:(OHMTagLibMetadata *)metadata
 {
-	NSLog(@"We have new metadata!");
-	NSLog(@"artist = %@ | album = %@ | title = %@", metadata.artist, metadata.album, metadata.title);
+	GTMLoggerDebug(@"We have new metadata!");
+	GTMLoggerDebug(@"artist = %@ | album = %@ | title = %@", metadata.artist, metadata.album, metadata.title);
 }
 
 -(void)metadataRequest:(OHMTagLibMetadataRequest *)request parserError:(NSError *)error
 {
-	NSLog(@"Error when parsing metadata! %@", [error localizedDescription]);
+	GTMLoggerDebug(@"Error when parsing metadata! %@", [error localizedDescription]);
 }
 
 -(void)metadataRequest:(OHMTagLibMetadataRequest *)request needMoreData:(int)bytes
 {
-	NSLog(@"metadata needs more data: %d!", bytes);
+	GTMLoggerDebug(@"metadata needs more data: %d!", bytes);
 }
 
 @end
@@ -45,9 +45,9 @@
 int main(int argc, char *argv[])
 {
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
-	NSLog(@"argc = %d", argc);
+	GTMLoggerDebug(@"argc = %d", argc);
 	if (argc != 2) {
-		NSLog(@"Need a filename!");
+		GTMLoggerDebug(@"Need a filename!");
 		exit(-1);
 	}
 	

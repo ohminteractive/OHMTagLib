@@ -7,7 +7,13 @@
  *
  */
 
-//  Most code here is from the XMMS2 project, this is their header:
+/*  Code in this file is mostly taken from the XMMS2 project.
+ *  It's modified to work within OHMTagLib, so Cocoa types are
+ *  added.
+ *  While XMMS2 is licensed under LGPL v2.1 permission to redistribute
+ *  this code under BSD is requested from original authors.
+ */
+
 /*  XMMS2 - X Music Multiplexer System
  *  Copyright (C) 2003-2009 XMMS2 Team
  *
@@ -54,13 +60,13 @@ xmms_id3v2_is_header (unsigned char *buf, xmms_id3v2_header_t *header)
 	if (strncmp ((char *)id3head->id, "ID3", 3)) return FALSE;
 	
 	if (id3head->ver > 4 || id3head->ver < 2) {
-		NSLog (@"Unsupported id3v2 version (%d)", id3head->ver);
+		GTMLoggerDebug (@"Unsupported id3v2 version (%d)", id3head->ver);
 		return FALSE;
 	}
 	
 	if ((id3head->size[0] | id3head->size[1] | id3head->size[2] |
 	     id3head->size[3]) & 0x80) {
-		NSLog (@"id3v2 tag having lenbyte with msb set "
+		GTMLoggerDebug (@"id3v2 tag having lenbyte with msb set "
 			   "(%02x %02x %02x %02x)!  Probably broken "
 			   "tag/tag-writer. Skipping tag.",
 			   id3head->size[0], id3head->size[1],
@@ -80,7 +86,7 @@ xmms_id3v2_is_header (unsigned char *buf, xmms_id3v2_header_t *header)
 		header->len += sizeof (id3head_t);
 	}
 	
-	NSLog (@"Found id3v2 header (version=%d, rev=%d, len=%d, flags=%x)",
+	GTMLoggerDebug (@"Found id3v2 header (version=%d, rev=%d, len=%d, flags=%x)",
 		   header->ver, header->rev, header->len, header->flags);
 	
 	return TRUE;
@@ -100,7 +106,7 @@ binary_to_enc (unsigned char val)
 	} else if (val == 0x03) {
 		retval = NSUTF8StringEncoding;
 	} else {
-		NSLog (@"UNKNOWN id3v2.4 encoding (%02x)!", val);
+		GTMLoggerDebug (@"UNKNOWN id3v2.4 encoding (%02x)!", val);
 		retval = NSASCIIStringEncoding;
 	}
 	return retval;
@@ -179,7 +185,7 @@ handle_id3v2_text (OHMTagLibMetadata *entry, xmms_id3v2_header_t *head,
 	int i = 0;
 	
 	if (len < 1) {
-		NSLog (@"Skipping short id3v2 text-frame");
+		GTMLoggerDebug (@"Skipping short id3v2 text-frame");
 		return;
 	}
 	
@@ -195,7 +201,7 @@ handle_id3v2_text (OHMTagLibMetadata *entry, xmms_id3v2_header_t *head,
 		}
 		i++;
 	}
-	//NSLog (@"Unhandled tag %c%c%c%c", (type >> 24) & 0xff, (type >> 16) & 0xff, (type >> 8) & 0xff, (type) & 0xff);
+	//GTMLoggerDebug (@"Unhandled tag %c%c%c%c", (type >> 24) & 0xff, (type >> 16) & 0xff, (type >> 8) & 0xff, (type) & 0xff);
 }
 
 
@@ -216,17 +222,17 @@ xmms_id3v2_parse (OHMTagLibMetadata *entry, unsigned char *buf, xmms_id3v2_heade
 	
 	if (head->flags & ID3v2_HEADER_FLAGS_UNSYNC) {
 		int i, j;
-		NSLog (@"Removing false syncronisations from id3v2 tag");
+		GTMLoggerDebug (@"Removing false syncronisations from id3v2 tag");
 		for (i = 0, j = 0; i < len; i++, j++) {
 			buf[i] = buf[j];
 			if (i < len-1 && buf[i] == 0xff && buf[i+1] == 0x00) {
-				NSLog (@" - false sync @%d", i);
+				GTMLoggerDebug (@" - false sync @%d", i);
 				/* skip next byte */
 				i++;
 			}
 		}
 		len = j;
-		NSLog (@"Removed %d false syncs", i-j);
+		GTMLoggerDebug (@"Removed %d false syncs", i-j);
 	}
 	
 	while (len>0) {
@@ -268,7 +274,7 @@ xmms_id3v2_parse (OHMTagLibMetadata *entry, unsigned char *buf, xmms_id3v2_heade
 						next_size = (tmp[4]<<21) | (tmp[5]<<14) | (tmp[6]<<7) | (tmp[7]);
 						
 						if (next_size+10 > (len-size)) {
-							NSLog (@"Uho, seems like someone isn't using synchsafe integers here...");
+							GTMLoggerDebug (@"Uho, seems like someone isn't using synchsafe integers here...");
 							broken_version4_frame_size_hack = TRUE;
 						}
 					}

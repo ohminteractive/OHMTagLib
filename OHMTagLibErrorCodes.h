@@ -10,5 +10,6 @@
 enum OHMTagLibErrorCodes {
 	kOHMTagLibErrorGeneric,
 	kOHMTagLibErrorPropertyNotSet,
-	kOHMTagLibErrorMetadataParser
+	kOHMTagLibErrorMetadataParser,
+	kOHMTagLibErrorNotEnoughData
 };

@@ -11,8 +11,8 @@
 #import "OHMTagLibMetadataRequest.h"
 
 @interface ID3v2 : NSObject<OHMTagLibReader> {
-	OHMTagLibMetadataRequest *request;
-	NSString *name;
+    OHMPositionalBuffer *buffer;
+    id<OHMTagLibReaderDelegate> delegate;
 }
 
 @end

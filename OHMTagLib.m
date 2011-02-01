@@ -13,37 +13,59 @@
 @implementation OHMTagLib
 
 @synthesize delegate;
+@synthesize useConcurrentSessions;
 
 -(id) init
 {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		_readers = [[NSArray alloc] initWithObjects:[ID3v2 class], [MP4 class], nil];
 		_operationQueue = [NSOperationQueue new];
-		NSLog(@"OHMTagLib init!");
+        _operationQueue.name = @"readMetadataQueue";
+        self.useConcurrentSessions = YES;
+		GTMLoggerDebug(@"OHMTagLib init!");
 	}
 	return self;
 }
 
--(BOOL)canHandleData:(NSData*)data
+-(Class)getReaderForData:(NSData*)data
 {
-	for (Class reader in _readers) {
-		if ([reader isMine:data]) {
-			return YES;
-		}
-	}
-	return NO;
+    for (Class reader in _readers) {
+        GTMLoggerDebug(@"Trying reader %@", [reader name]);
+        if ([reader isMine:data]) {
+            return reader;
+        }
+    }
+    return nil;
 }
 
--(void)addMetadataRequest:(OHMTagLibMetadataRequest*)request
+-(BOOL)canHandleData:(NSData*)data
 {
-	for (Class reader in _readers) {
-		if ([reader isMine:request.data]) {
-			id r = [reader new];
-			request.reader = r;
-			[request parseMetadata];
-			return;
-		}
-	}
+    Class reader = [self getReaderForData:data];
+    return reader != nil;
+}
+
+-(void)readMetadata:(OHMTagLibMetadataRequest*)request
+{
+    /* "borrow" 10 bytes of data and see if they match any reader plugin */
+    NSData *data = [request.buffer peekDataFromCurrentPosition:10 error:nil];
+    if ([data length] != 10) {
+        GTMLoggerDebug(@"didn't get 10 bytes from peek!");
+        return;
+    }
+    Class reader = [self getReaderForData:data];
+    if (!reader) {
+        GTMLoggerDebug(@"No reader, big big problem");
+        return;
+    }
+    
+    request.reader = [reader new];
+    if (self.useConcurrentSessions) {
+        [_operationQueue addOperationWithBlock:^{
+            [request readMetadata];
+        }];
+    } else {
+        [request readMetadata];
+    }
 }
 
 -(void)dealloc

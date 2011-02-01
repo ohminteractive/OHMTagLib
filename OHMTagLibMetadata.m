@@ -11,6 +11,12 @@
 
 @implementation OHMTagLibMetadata
 
-@synthesize artist, album, title, tracknr, year, partofset;
+@synthesize artist, album, title, tracknr, year, partofset, isPodcast;
+
+-(NSString*)description
+{
+    return [NSString stringWithFormat:@"artist = %@\nalbum = %@\ntitle = %@", 
+            self.artist, self.album, self.title];
+}
 
 @end
