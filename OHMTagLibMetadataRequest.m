@@ -15,7 +15,7 @@
 @synthesize delegate;
 @synthesize buffer;
 @synthesize reader;
-
+@synthesize position;
 
 -(id)init
 {
@@ -35,11 +35,11 @@
     }
 }
 
--(void)buffer:(OHMPositionalBuffer *)buf jumpToPosition:(UInt64)position
+-(void)buffer:(OHMPositionalBuffer *)buf jumpToPosition:(UInt64)position_
 {
     GTMLoggerDebug(@"metadataRequest is jumping");
     if ([delegate respondsToSelector:@selector(metadataRequest:jumpBytes:)]) {
-        [delegate metadataRequest:self jumpBytes:position];
+        [delegate metadataRequest:self jumpBytes:position_];
     }
 }
 

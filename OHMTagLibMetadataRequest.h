@@ -29,6 +29,7 @@
 	id delegate;
     OHMPositionalBuffer *buffer;
 	id<OHMTagLibReader> reader;
+    int position;
 	
 @private
 	int waitingForBytes;
@@ -39,6 +40,8 @@
 
 @property (nonatomic, retain) id<OHMTagLibMetadataRequestDelegate> delegate;
 @property (nonatomic, retain) id<OHMTagLibReader> reader;
+
+@property (nonatomic, assign) int position;
 
 -(id)init;
 -(void)readMetadata;
