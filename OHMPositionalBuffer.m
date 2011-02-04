@@ -7,7 +7,7 @@
 //
 
 #import "OHMPositionalBuffer.h"
-
+#import "GTMLogger.h"
 
 @implementation OHMPositionalBuffer
 

@@ -8,6 +8,7 @@
 
 #import "MP4.h"
 #import "OHMTagLibErrorCodes.h"
+#import "GTMLogger.h"
 
 @implementation MP4
 

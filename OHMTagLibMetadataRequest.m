@@ -7,7 +7,7 @@
 //
 
 #import "OHMTagLibMetadataRequest.h"
-
+#import "GTMLogger.h"
 
 @implementation OHMTagLibMetadataRequest
 

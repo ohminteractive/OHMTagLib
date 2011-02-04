@@ -24,6 +24,7 @@
 #import <Foundation/Foundation.h>
 #import "xmms2_id3v2.h"
 #import "OHMTagLibErrorCodes.h"
+#import "GTMLogger.h"
 
 #pragma mark XMMS2 functions
 

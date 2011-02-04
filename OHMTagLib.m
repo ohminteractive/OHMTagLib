@@ -9,6 +9,8 @@
 #import "OHMTagLib.h"
 #import "ID3v2.h"
 #import "MP4.h"
+#import "GTMLogger.h"
+
 
 @implementation OHMTagLib
 
