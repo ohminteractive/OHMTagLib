@@ -11,6 +11,30 @@
 		61059E6612D477BC004A7FAE /* libOHMTagLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libOHMTagLib.a */; };
 		611CEAEE12CB5C1C0000A197 /* MP4Atom.h in Headers */ = {isa = PBXBuildFile; fileRef = 611CEAEC12CB5C1C0000A197 /* MP4Atom.h */; };
 		611CEAEF12CB5C1C0000A197 /* MP4Atom.m in Sources */ = {isa = PBXBuildFile; fileRef = 611CEAED12CB5C1C0000A197 /* MP4Atom.m */; };
+		6120372E12FEA4BC009900D2 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120371F12FEA4BC009900D2 /* GTMDefines.h */; };
+		6120372F12FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372012FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.h */; };
+		6120373012FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372112FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.m */; };
+		6120373112FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372112FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.m */; };
+		6120373212FEA4BC009900D2 /* GTMLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372212FEA4BC009900D2 /* GTMLogger.h */; };
+		6120373312FEA4BC009900D2 /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372312FEA4BC009900D2 /* GTMLogger.m */; };
+		6120373412FEA4BC009900D2 /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372312FEA4BC009900D2 /* GTMLogger.m */; };
+		6120373512FEA4BC009900D2 /* GTMLoggerRingBufferWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372412FEA4BC009900D2 /* GTMLoggerRingBufferWriter.h */; };
+		6120373612FEA4BC009900D2 /* GTMLoggerRingBufferWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372512FEA4BC009900D2 /* GTMLoggerRingBufferWriter.m */; };
+		6120373712FEA4BC009900D2 /* GTMLoggerRingBufferWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372512FEA4BC009900D2 /* GTMLoggerRingBufferWriter.m */; };
+		6120373812FEA4BC009900D2 /* GTMObjC2Runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372612FEA4BC009900D2 /* GTMObjC2Runtime.h */; };
+		6120373912FEA4BC009900D2 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372712FEA4BC009900D2 /* GTMObjC2Runtime.m */; };
+		6120373A12FEA4BC009900D2 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372712FEA4BC009900D2 /* GTMObjC2Runtime.m */; };
+		6120373B12FEA4BC009900D2 /* GTMRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372812FEA4BC009900D2 /* GTMRegex.h */; };
+		6120373C12FEA4BC009900D2 /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372912FEA4BC009900D2 /* GTMRegex.m */; };
+		6120373D12FEA4BC009900D2 /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372912FEA4BC009900D2 /* GTMRegex.m */; };
+		6120373E12FEA4BC009900D2 /* GTMSenTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372A12FEA4BC009900D2 /* GTMSenTestCase.h */; };
+		6120373F12FEA4BC009900D2 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372B12FEA4BC009900D2 /* GTMSenTestCase.m */; };
+		6120374012FEA4BC009900D2 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372B12FEA4BC009900D2 /* GTMSenTestCase.m */; };
+		6120374112FEA4BC009900D2 /* GTMUnitTestDevLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372C12FEA4BC009900D2 /* GTMUnitTestDevLog.h */; };
+		6120374212FEA4BC009900D2 /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372D12FEA4BC009900D2 /* GTMUnitTestDevLog.m */; };
+		6120374312FEA4BC009900D2 /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372D12FEA4BC009900D2 /* GTMUnitTestDevLog.m */; };
+		6120374512FEA4D9009900D2 /* GTMGarbageCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120374412FEA4D9009900D2 /* GTMGarbageCollection.h */; };
+		6120374712FEA538009900D2 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120374612FEA538009900D2 /* GTMIPhoneUnitTestMain.m */; };
 		6137878B12F1A6B60080E063 /* TestOHMTagLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6137878A12F1A6B60080E063 /* TestOHMTagLib.m */; };
 		6137878C12F1AB130080E063 /* MP4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186469712BF23DA008A71DF /* MP4.m */; };
 		6153D53412B62D9900820448 /* OHMTagLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 6153D53212B62D9900820448 /* OHMTagLib.h */; };
@@ -35,22 +59,7 @@
 		61B8D48812DB138300A2F63F /* OHMData.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B8D48612DB138300A2F63F /* OHMData.h */; };
 		61B8D48912DB138300A2F63F /* OHMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B8D48712DB138300A2F63F /* OHMData.m */; };
 		61B8D48A12DB138300A2F63F /* OHMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B8D48712DB138300A2F63F /* OHMData.m */; };
-		61B92C0312D0DB8700208864 /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92BF212D0DB4100208864 /* GTMUnitTestDevLog.m */; };
-		61B92C0412D0DB8700208864 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92BF412D0DB4100208864 /* GTMSenTestCase.m */; };
-		61B92C0512D0DB8700208864 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92BF612D0DB4100208864 /* GTMIPhoneUnitTestMain.m */; };
-		61B92C0612D0DB8700208864 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92BF712D0DB4100208864 /* GTMIPhoneUnitTestDelegate.m */; };
-		61B92C1012D0DBBE00208864 /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92C0B12D0DBBE00208864 /* GTMRegex.m */; };
-		61B92C1112D0DBBE00208864 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92C0D12D0DBBE00208864 /* GTMObjC2Runtime.m */; };
 		61B92C2912D0DC7F00208864 /* Test_MP4Atom.m in Sources */ = {isa = PBXBuildFile; fileRef = 611CEB2212CB6C2A0000A197 /* Test_MP4Atom.m */; };
-		61B92C4312D0DDB000208864 /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92C4012D0DDB000208864 /* GTMLogger.m */; };
-		61B92C4412D0DDB000208864 /* GTMLoggerRingBufferWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92C4212D0DDB000208864 /* GTMLoggerRingBufferWriter.m */; };
-		61B92C4512D0DDB000208864 /* GTMLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B92C3F12D0DDB000208864 /* GTMLogger.h */; };
-		61B92C4612D0DDB000208864 /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92C4012D0DDB000208864 /* GTMLogger.m */; };
-		61B92C4712D0DDB000208864 /* GTMLoggerRingBufferWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B92C4112D0DDB000208864 /* GTMLoggerRingBufferWriter.h */; };
-		61B92C4812D0DDB000208864 /* GTMLoggerRingBufferWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92C4212D0DDB000208864 /* GTMLoggerRingBufferWriter.m */; };
-		61B92C4912D0DDC400208864 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B92C1212D0DBD000208864 /* GTMDefines.h */; };
-		61B92C4A12D0DDC400208864 /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B92C0B12D0DBBE00208864 /* GTMRegex.m */; };
-		61B92C4B12D0DDC400208864 /* GTMRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B92C0C12D0DBBE00208864 /* GTMRegex.h */; };
 		61C4635212D21ABF00830F36 /* OHMPositionalBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 61C4635012D21ABF00830F36 /* OHMPositionalBuffer.h */; };
 		61C4635312D21ABF00830F36 /* OHMPositionalBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4635112D21ABF00830F36 /* OHMPositionalBuffer.m */; };
 		61D8AABF12CBA673006C6A54 /* MP4Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D8AABC12CBA673006C6A54 /* MP4Parser.h */; };
@@ -82,6 +91,23 @@
 		611CEAED12CB5C1C0000A197 /* MP4Atom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MP4Atom.m; sourceTree = "<group>"; };
 		611CEB2112CB6C2A0000A197 /* Test_MP4Atom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_MP4Atom.h; path = MP4Parser/Test_MP4Atom.h; sourceTree = "<group>"; };
 		611CEB2212CB6C2A0000A197 /* Test_MP4Atom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test_MP4Atom.m; path = MP4Parser/Test_MP4Atom.m; sourceTree = "<group>"; };
+		6120371F12FEA4BC009900D2 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = GTM/GTMDefines.h; sourceTree = "<group>"; };
+		6120372012FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMIPhoneUnitTestDelegate.h; path = GTM/GTMIPhoneUnitTestDelegate.h; sourceTree = "<group>"; };
+		6120372112FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMIPhoneUnitTestDelegate.m; path = GTM/GTMIPhoneUnitTestDelegate.m; sourceTree = "<group>"; };
+		6120372212FEA4BC009900D2 /* GTMLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMLogger.h; path = GTM/GTMLogger.h; sourceTree = "<group>"; };
+		6120372312FEA4BC009900D2 /* GTMLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMLogger.m; path = GTM/GTMLogger.m; sourceTree = "<group>"; };
+		6120372412FEA4BC009900D2 /* GTMLoggerRingBufferWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMLoggerRingBufferWriter.h; path = GTM/GTMLoggerRingBufferWriter.h; sourceTree = "<group>"; };
+		6120372512FEA4BC009900D2 /* GTMLoggerRingBufferWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMLoggerRingBufferWriter.m; path = GTM/GTMLoggerRingBufferWriter.m; sourceTree = "<group>"; };
+		6120372612FEA4BC009900D2 /* GTMObjC2Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMObjC2Runtime.h; path = GTM/GTMObjC2Runtime.h; sourceTree = "<group>"; };
+		6120372712FEA4BC009900D2 /* GTMObjC2Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMObjC2Runtime.m; path = GTM/GTMObjC2Runtime.m; sourceTree = "<group>"; };
+		6120372812FEA4BC009900D2 /* GTMRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMRegex.h; path = GTM/GTMRegex.h; sourceTree = "<group>"; };
+		6120372912FEA4BC009900D2 /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegex.m; path = GTM/GTMRegex.m; sourceTree = "<group>"; };
+		6120372A12FEA4BC009900D2 /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSenTestCase.h; path = GTM/GTMSenTestCase.h; sourceTree = "<group>"; };
+		6120372B12FEA4BC009900D2 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSenTestCase.m; path = GTM/GTMSenTestCase.m; sourceTree = "<group>"; };
+		6120372C12FEA4BC009900D2 /* GTMUnitTestDevLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMUnitTestDevLog.h; path = GTM/GTMUnitTestDevLog.h; sourceTree = "<group>"; };
+		6120372D12FEA4BC009900D2 /* GTMUnitTestDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMUnitTestDevLog.m; path = GTM/GTMUnitTestDevLog.m; sourceTree = "<group>"; };
+		6120374412FEA4D9009900D2 /* GTMGarbageCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMGarbageCollection.h; path = GTM/GTMGarbageCollection.h; sourceTree = "<group>"; };
+		6120374612FEA538009900D2 /* GTMIPhoneUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMIPhoneUnitTestMain.m; path = GTM/GTMIPhoneUnitTestMain.m; sourceTree = "<group>"; };
 		6137878912F1A6B60080E063 /* TestOHMTagLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOHMTagLib.h; sourceTree = "<group>"; };
 		6137878A12F1A6B60080E063 /* TestOHMTagLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOHMTagLib.m; sourceTree = "<group>"; };
 		6153D53212B62D9900820448 /* OHMTagLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLib.h; sourceTree = "<group>"; };
@@ -110,24 +136,8 @@
 		618BB70412E68FF20053CE07 /* TestMP4Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMP4Parser.m; sourceTree = "<group>"; };
 		61B8D48612DB138300A2F63F /* OHMData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMData.h; sourceTree = "<group>"; };
 		61B8D48712DB138300A2F63F /* OHMData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHMData.m; sourceTree = "<group>"; };
-		61B92BF212D0DB4100208864 /* GTMUnitTestDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMUnitTestDevLog.m; path = "google-toolkit-for-mac/UnitTesting/GTMUnitTestDevLog.m"; sourceTree = "<group>"; };
-		61B92BF312D0DB4100208864 /* GTMUnitTestDevLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMUnitTestDevLog.h; path = "google-toolkit-for-mac/UnitTesting/GTMUnitTestDevLog.h"; sourceTree = "<group>"; };
-		61B92BF412D0DB4100208864 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSenTestCase.m; path = "google-toolkit-for-mac/UnitTesting/GTMSenTestCase.m"; sourceTree = "<group>"; };
-		61B92BF512D0DB4100208864 /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSenTestCase.h; path = "google-toolkit-for-mac/UnitTesting/GTMSenTestCase.h"; sourceTree = "<group>"; };
-		61B92BF612D0DB4100208864 /* GTMIPhoneUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMIPhoneUnitTestMain.m; path = "google-toolkit-for-mac/UnitTesting/GTMIPhoneUnitTestMain.m"; sourceTree = "<group>"; };
-		61B92BF712D0DB4100208864 /* GTMIPhoneUnitTestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMIPhoneUnitTestDelegate.m; path = "google-toolkit-for-mac/UnitTesting/GTMIPhoneUnitTestDelegate.m"; sourceTree = "<group>"; };
-		61B92BF812D0DB4100208864 /* GTMIPhoneUnitTestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMIPhoneUnitTestDelegate.h; path = "google-toolkit-for-mac/UnitTesting/GTMIPhoneUnitTestDelegate.h"; sourceTree = "<group>"; };
 		61B92BFD12D0DB6A00208864 /* UnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B92BFF12D0DB6B00208864 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
-		61B92C0B12D0DBBE00208864 /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegex.m; path = "google-toolkit-for-mac/Foundation/GTMRegex.m"; sourceTree = "<group>"; };
-		61B92C0C12D0DBBE00208864 /* GTMRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMRegex.h; path = "google-toolkit-for-mac/Foundation/GTMRegex.h"; sourceTree = "<group>"; };
-		61B92C0D12D0DBBE00208864 /* GTMObjC2Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMObjC2Runtime.m; path = "google-toolkit-for-mac/Foundation/GTMObjC2Runtime.m"; sourceTree = "<group>"; };
-		61B92C0E12D0DBBE00208864 /* GTMObjC2Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMObjC2Runtime.h; path = "google-toolkit-for-mac/Foundation/GTMObjC2Runtime.h"; sourceTree = "<group>"; };
-		61B92C1212D0DBD000208864 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "google-toolkit-for-mac/GTMDefines.h"; sourceTree = "<group>"; };
-		61B92C3F12D0DDB000208864 /* GTMLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMLogger.h; path = "../DropPlay/google-toolkit-for-mac/Foundation/GTMLogger.h"; sourceTree = SOURCE_ROOT; };
-		61B92C4012D0DDB000208864 /* GTMLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMLogger.m; path = "../DropPlay/google-toolkit-for-mac/Foundation/GTMLogger.m"; sourceTree = SOURCE_ROOT; };
-		61B92C4112D0DDB000208864 /* GTMLoggerRingBufferWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMLoggerRingBufferWriter.h; path = "../DropPlay/google-toolkit-for-mac/Foundation/GTMLoggerRingBufferWriter.h"; sourceTree = SOURCE_ROOT; };
-		61B92C4212D0DDB000208864 /* GTMLoggerRingBufferWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMLoggerRingBufferWriter.m; path = "../DropPlay/google-toolkit-for-mac/Foundation/GTMLoggerRingBufferWriter.m"; sourceTree = SOURCE_ROOT; };
 		61C4635012D21ABF00830F36 /* OHMPositionalBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMPositionalBuffer.h; sourceTree = "<group>"; };
 		61C4635112D21ABF00830F36 /* OHMPositionalBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHMPositionalBuffer.m; sourceTree = "<group>"; };
 		61D8AABC12CBA673006C6A54 /* MP4Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4Parser.h; sourceTree = "<group>"; };
@@ -313,22 +323,23 @@
 		61B92BEB12D0DA7400208864 /* GTM */ = {
 			isa = PBXGroup;
 			children = (
-				61B92C3F12D0DDB000208864 /* GTMLogger.h */,
-				61B92C4012D0DDB000208864 /* GTMLogger.m */,
-				61B92C4112D0DDB000208864 /* GTMLoggerRingBufferWriter.h */,
-				61B92C4212D0DDB000208864 /* GTMLoggerRingBufferWriter.m */,
-				61B92C1212D0DBD000208864 /* GTMDefines.h */,
-				61B92C0B12D0DBBE00208864 /* GTMRegex.m */,
-				61B92C0C12D0DBBE00208864 /* GTMRegex.h */,
-				61B92C0D12D0DBBE00208864 /* GTMObjC2Runtime.m */,
-				61B92C0E12D0DBBE00208864 /* GTMObjC2Runtime.h */,
-				61B92BF212D0DB4100208864 /* GTMUnitTestDevLog.m */,
-				61B92BF312D0DB4100208864 /* GTMUnitTestDevLog.h */,
-				61B92BF412D0DB4100208864 /* GTMSenTestCase.m */,
-				61B92BF512D0DB4100208864 /* GTMSenTestCase.h */,
-				61B92BF612D0DB4100208864 /* GTMIPhoneUnitTestMain.m */,
-				61B92BF712D0DB4100208864 /* GTMIPhoneUnitTestDelegate.m */,
-				61B92BF812D0DB4100208864 /* GTMIPhoneUnitTestDelegate.h */,
+				6120374612FEA538009900D2 /* GTMIPhoneUnitTestMain.m */,
+				6120374412FEA4D9009900D2 /* GTMGarbageCollection.h */,
+				6120371F12FEA4BC009900D2 /* GTMDefines.h */,
+				6120372012FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.h */,
+				6120372112FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.m */,
+				6120372212FEA4BC009900D2 /* GTMLogger.h */,
+				6120372312FEA4BC009900D2 /* GTMLogger.m */,
+				6120372412FEA4BC009900D2 /* GTMLoggerRingBufferWriter.h */,
+				6120372512FEA4BC009900D2 /* GTMLoggerRingBufferWriter.m */,
+				6120372612FEA4BC009900D2 /* GTMObjC2Runtime.h */,
+				6120372712FEA4BC009900D2 /* GTMObjC2Runtime.m */,
+				6120372812FEA4BC009900D2 /* GTMRegex.h */,
+				6120372912FEA4BC009900D2 /* GTMRegex.m */,
+				6120372A12FEA4BC009900D2 /* GTMSenTestCase.h */,
+				6120372B12FEA4BC009900D2 /* GTMSenTestCase.m */,
+				6120372C12FEA4BC009900D2 /* GTMUnitTestDevLog.h */,
+				6120372D12FEA4BC009900D2 /* GTMUnitTestDevLog.m */,
 			);
 			name = GTM;
 			sourceTree = "<group>";
@@ -350,12 +361,17 @@
 				6186466D12BF212A008A71DF /* OHMTagLib_Prefix.pch in Headers */,
 				611CEAEE12CB5C1C0000A197 /* MP4Atom.h in Headers */,
 				61D8AABF12CBA673006C6A54 /* MP4Parser.h in Headers */,
-				61B92C4512D0DDB000208864 /* GTMLogger.h in Headers */,
-				61B92C4712D0DDB000208864 /* GTMLoggerRingBufferWriter.h in Headers */,
-				61B92C4912D0DDC400208864 /* GTMDefines.h in Headers */,
-				61B92C4B12D0DDC400208864 /* GTMRegex.h in Headers */,
 				61C4635212D21ABF00830F36 /* OHMPositionalBuffer.h in Headers */,
 				61B8D48812DB138300A2F63F /* OHMData.h in Headers */,
+				6120372E12FEA4BC009900D2 /* GTMDefines.h in Headers */,
+				6120372F12FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.h in Headers */,
+				6120373212FEA4BC009900D2 /* GTMLogger.h in Headers */,
+				6120373512FEA4BC009900D2 /* GTMLoggerRingBufferWriter.h in Headers */,
+				6120373812FEA4BC009900D2 /* GTMObjC2Runtime.h in Headers */,
+				6120373B12FEA4BC009900D2 /* GTMRegex.h in Headers */,
+				6120373E12FEA4BC009900D2 /* GTMSenTestCase.h in Headers */,
+				6120374112FEA4BC009900D2 /* GTMUnitTestDevLog.h in Headers */,
+				6120374512FEA4D9009900D2 /* GTMGarbageCollection.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +484,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "google-toolkit-for-mac/UnitTesting/RunIPhoneUnitTest.sh";
+			shellScript = GTM/RunIPhoneUnitTest.sh;
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -486,20 +502,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61B92C0312D0DB8700208864 /* GTMUnitTestDevLog.m in Sources */,
-				61B92C0412D0DB8700208864 /* GTMSenTestCase.m in Sources */,
-				61B92C0512D0DB8700208864 /* GTMIPhoneUnitTestMain.m in Sources */,
-				61B92C0612D0DB8700208864 /* GTMIPhoneUnitTestDelegate.m in Sources */,
-				61B92C1012D0DBBE00208864 /* GTMRegex.m in Sources */,
-				61B92C1112D0DBBE00208864 /* GTMObjC2Runtime.m in Sources */,
 				61B92C2912D0DC7F00208864 /* Test_MP4Atom.m in Sources */,
-				61B92C4312D0DDB000208864 /* GTMLogger.m in Sources */,
-				61B92C4412D0DDB000208864 /* GTMLoggerRingBufferWriter.m in Sources */,
 				61059E5A12D47799004A7FAE /* TestPositionalBuffer.m in Sources */,
 				61B8D48A12DB138300A2F63F /* OHMData.m in Sources */,
 				61630E5E12E3DD9800220C32 /* TestOHMData.m in Sources */,
 				618BB70512E68FF20053CE07 /* TestMP4Parser.m in Sources */,
 				6137878B12F1A6B60080E063 /* TestOHMTagLib.m in Sources */,
+				6120373112FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.m in Sources */,
+				6120373412FEA4BC009900D2 /* GTMLogger.m in Sources */,
+				6120373712FEA4BC009900D2 /* GTMLoggerRingBufferWriter.m in Sources */,
+				6120373A12FEA4BC009900D2 /* GTMObjC2Runtime.m in Sources */,
+				6120373D12FEA4BC009900D2 /* GTMRegex.m in Sources */,
+				6120374012FEA4BC009900D2 /* GTMSenTestCase.m in Sources */,
+				6120374312FEA4BC009900D2 /* GTMUnitTestDevLog.m in Sources */,
+				6120374712FEA538009900D2 /* GTMIPhoneUnitTestMain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,11 +531,15 @@
 				6186466112BF1FE6008A71DF /* OHMTagLibMetadataRequest.m in Sources */,
 				611CEAEF12CB5C1C0000A197 /* MP4Atom.m in Sources */,
 				61D8AAC012CBA673006C6A54 /* MP4Parser.m in Sources */,
-				61B92C4612D0DDB000208864 /* GTMLogger.m in Sources */,
-				61B92C4812D0DDB000208864 /* GTMLoggerRingBufferWriter.m in Sources */,
-				61B92C4A12D0DDC400208864 /* GTMRegex.m in Sources */,
 				61C4635312D21ABF00830F36 /* OHMPositionalBuffer.m in Sources */,
 				61B8D48912DB138300A2F63F /* OHMData.m in Sources */,
+				6120373012FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.m in Sources */,
+				6120373312FEA4BC009900D2 /* GTMLogger.m in Sources */,
+				6120373612FEA4BC009900D2 /* GTMLoggerRingBufferWriter.m in Sources */,
+				6120373912FEA4BC009900D2 /* GTMObjC2Runtime.m in Sources */,
+				6120373C12FEA4BC009900D2 /* GTMRegex.m in Sources */,
+				6120373F12FEA4BC009900D2 /* GTMSenTestCase.m in Sources */,
+				6120374212FEA4BC009900D2 /* GTMUnitTestDevLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
