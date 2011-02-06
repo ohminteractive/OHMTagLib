@@ -28,6 +28,8 @@
 -(NSData*)popDataWithRange:(NSRange)range;
 -(void)removeAllData;
 
+-(void)discardDataWithRange:(NSRange)range;
+
 @property (nonatomic, assign) BOOL shouldExpand;
 @property (nonatomic, readonly) NSUInteger freeSpace;
 @property (nonatomic, readonly) NSUInteger length;

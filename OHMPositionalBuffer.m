@@ -31,24 +31,25 @@
 	return self;
 }
 
--(UInt64)length
+-(NSUInteger)length
 {
 	@synchronized(buffer) {
 		return [buffer length];
 	}
 }
 
--(NSData*)peekDataFromCurrentPosition:(UInt64)numBytes error:(NSError **)err
+-(NSData*)peekDataFromCurrentPosition:(NSUInteger)numBytes error:(NSError **)err
 {
     @synchronized(buffer) {
-        if (numBytes > [buffer length]) {
-            [self getMoreData:numBytes - [buffer length]];
+        NSUInteger buflen = [buffer length];
+        if (numBytes > buflen) {
+            [self getMoreData:numBytes - buflen];
         }
-        if ([buffer length] == 0) {
+        if (buflen == 0) {
             return nil;
         }
         
-        UInt64 readLength = MIN([buffer length], numBytes);
+        NSUInteger readLength = MIN(buflen, numBytes);
         NSData *ret = [buffer getDataWithRange:NSMakeRange(0, readLength)];
         if (!ret) {
             GTMLoggerDebug(@"Couldn't peek data from OHMData");
@@ -58,20 +59,20 @@
     }
 }
 
--(NSData*)getDataFromCurrentPosition:(UInt64)numBytes error:(NSError **)err
+-(NSData*)getDataFromCurrentPosition:(NSUInteger)numBytes error:(NSError **)err
 {
 	@synchronized(buffer) {
-		if (numBytes > [buffer length]) {
+        NSUInteger buflen = [buffer length];
+		if (numBytes > buflen) {
 			/* need more data */
-			[self getMoreData:numBytes - [buffer length]];
+			[self getMoreData:numBytes - buflen];
 		}
 		
-		if ([buffer length] == 0) {
+		if (buflen == 0) {
 			return nil;
 		}
 		
-		UInt64 readLength = MIN([buffer length], numBytes);
-		
+		NSUInteger readLength = MIN(buflen, numBytes);
 		NSData *ret = [buffer popDataWithRange:NSMakeRange(0, readLength)];
 		if (!ret) {
 			GTMLoggerDebug(@"couldn't get subdata!");
@@ -90,34 +91,32 @@
         if ([consumerDelegate respondsToSelector:@selector(bufferHaveMoreData:)]) {
             [consumerDelegate bufferHaveMoreData:self];
         }
-        waitingForMoreData = NO;
 	}
 }
 
--(BOOL)jumpPosition:(UInt64)numBytes
+-(BOOL)jumpPosition:(NSUInteger)numBytes
 {
 	@synchronized(buffer) {
-		if ([buffer length] < numBytes) {
-			if ([sourceDelegate respondsToSelector:@selector(buffer:jumpToPosition:)]) {
-				[sourceDelegate buffer:self jumpToPosition:numBytes - [buffer length]];
-				/* reset buffer */
-				[buffer removeAllData];
-				waitingForMoreData = YES;
-			} else {
-				return NO;
-			}
-		} else {
-			/* forward the buffer */
-			[buffer popDataWithRange:NSMakeRange(0, numBytes)];
+        NSUInteger buflen = [buffer length];
+        if (buflen >= numBytes) {
+			[buffer discardDataWithRange:NSMakeRange(0, numBytes)];
+			/* forward the buffer */            
+        }
+        else {
+            /* reset buffer */
+            [buffer removeAllData];
+            BOOL hasDelegate = [sourceDelegate respondsToSelector:@selector(buffer:jumpToPosition:)];
+			if (hasDelegate) {
+				[sourceDelegate buffer:self jumpToPosition:(numBytes - buflen)];
+            }
+            return hasDelegate;
 		}
-	}
+    }
 	return YES;
 }
 
--(void)getMoreData:(UInt64)length_
+-(void)getMoreData:(NSUInteger)length_
 {
-	waitingForMoreData = YES;
-	
 	if ([sourceDelegate respondsToSelector:@selector(buffer:needMoreData:)]) {
 		[sourceDelegate buffer:self needMoreData:length_];
 	}

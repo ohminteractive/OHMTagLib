@@ -27,7 +27,7 @@
     return self;
 }
 
--(void)buffer:(OHMPositionalBuffer *)buf needMoreData:(UInt64)bytes
+-(void)buffer:(OHMPositionalBuffer *)buf needMoreData:(NSUInteger)bytes
 {
     GTMLoggerDebug(@"metadatarequest needs more data");
     if ([delegate respondsToSelector:@selector(metadataRequest:needMoreData:)]) {
@@ -35,7 +35,7 @@
     }
 }
 
--(void)buffer:(OHMPositionalBuffer *)buf jumpToPosition:(UInt64)position_
+-(void)buffer:(OHMPositionalBuffer *)buf jumpToPosition:(NSUInteger)position_
 {
     GTMLoggerDebug(@"metadataRequest is jumping");
     if ([delegate respondsToSelector:@selector(metadataRequest:jumpBytes:)]) {

@@ -9,7 +9,15 @@
 #import "OHMData.h"
 #import "GTMLogger.h"
 
-#define EXTRA_DEBUG
+#define EXTRA_DEBUG 1
+
+#if EXTRA_DEBUG
+#define extraLogDebug(...) GTMLoggerDebug (__VA_ARGS__)
+#define extraLogError(...) GTMLoggerError (__VA_ARGS__)
+#else
+#define extraLogDebug(...) do {} while(0)
+#define extraLogError(...) do {} while(0)
+#endif
 
 @implementation OHMData
 
@@ -17,29 +25,24 @@
 
 -(NSUInteger)freeSpace
 {
-	@synchronized(self) {
-		return dataBufferSize - dataBufferLength;
-	}
+    return dataBufferSize - dataBufferLength;
 }
 
 -(NSUInteger)dataSize
 {
-	@synchronized(self) {
-		return dataBufferSize;
-	}
+    return dataBufferSize;
 }
 
 -(NSUInteger)length
 {
-	@synchronized(self) {
-		return dataBufferLength;
-	}
+    return dataBufferLength;
 }
 
 -(id)initWithSize:(NSUInteger)size
 {
 	if ((self = [super init])) {
 		dataBuffer = malloc (size);
+        memset(dataBuffer, 0, size);
 		dataBufferSize = size;
 		dataBufferLength = 0;
 		self.shouldExpand = YES;
@@ -57,95 +60,74 @@
 
 -(BOOL)addData:(NSData *)data
 {
-	@synchronized(self) {
-		if ([data length] > self.freeSpace) {
-			if (self.shouldExpand) {
-				/* realloc */
-#ifdef EXTRA_DEBUG
-				GTMLoggerDebug(@"need to realloc because freeSpace is %d", self.freeSpace);
-#endif
-				NSUInteger newSize = MAX (dataBufferSize * 2, [data length] + dataBufferSize);
-				dataBuffer = realloc (dataBuffer, newSize);
-#ifdef EXTRA_DEBUG
-				if (!dataBuffer) {
-					GTMLoggerError(@"failed to realloc the buffer to size: %d", newSize);
-				}
-#endif
-				dataBufferSize = newSize;
-#ifdef EXTRA_DEBUG
-				GTMLoggerDebug(@"Reallocing buffer to size %d", newSize);
-#endif
-			} else {
-				GTMLoggerError(@"wanted to add bytes, but shouldExpand was not set correctly.");
-				return NO;
-			}
-		}
-		[data getBytes:dataBuffer+dataBufferLength length:[data length]];
-		dataBufferLength += [data length];
-		return YES;
-	}
+    if ([data length] > self.freeSpace) {
+        if (self.shouldExpand) {
+            /* realloc */
+            extraLogDebug(@"need to realloc because freeSpace is %d", self.freeSpace);
+            NSUInteger newSize = MAX (dataBufferSize * 2, [data length] + dataBufferSize);
+            dataBuffer = realloc (dataBuffer, newSize);
+            if (!dataBuffer) {
+                extraLogError(@"failed to realloc the buffer to size: %d", newSize);
+            }
+            memset(dataBuffer + dataBufferSize, 0, newSize-dataBufferSize);
+            dataBufferSize = newSize;
+            extraLogDebug(@"Reallocing buffer to size %d", newSize);
+        } else {
+            extraLogError(@"wanted to add bytes, but shouldExpand was not set correctly.");
+            return NO;
+        }
+    }
+    [data getBytes:dataBuffer+dataBufferLength length:[data length]];
+    dataBufferLength += [data length];
+    return YES;
 }
 
 -(NSData*)getData
 {
-	@synchronized(self) {
-		return [NSData dataWithBytes:dataBuffer length:dataBufferLength];
-	}
+    return [NSData dataWithBytes:dataBuffer length:dataBufferLength];
 }
 
 -(NSData*)popData
 {
-	@synchronized(self) {
-		NSData *ret = [self getData];
-		/* reset data */
-		dataBufferLength = 0;
-		return ret;
-	}
+    NSData *ret = [self getData];
+    /* reset data */
+    dataBufferLength = 0;
+    return ret;
 }
 
 -(NSData*)getDataWithRange:(NSRange)range
 {
-	@synchronized(self) {
-		if (range.location < dataBufferLength &&
-			range.location + range.length <= dataBufferLength) {
-			return [NSData dataWithBytes:dataBuffer+range.location length:range.length];
-		} else {
-			GTMLoggerError(@"range is out of bounds");
-			return nil;
-			/* TODO: raise exception? */
-		}
-	}
-	return nil;
+    NSUInteger rangeEnd = range.length + range.location;
+    if (rangeEnd > dataBufferLength) {
+        extraLogError(@"range is out of bounds");
+        return nil;
+        /* TODO: raise exception? */
+    }
+    return [NSData dataWithBytes:dataBuffer+range.location length:range.length];
 }
 
 -(NSData*)popDataWithRange:(NSRange)range
 {
-	@synchronized(self) {
-		NSData *data = [self getDataWithRange:range];
-		/* remove data that we got */
-#ifdef EXTRA_DEBUG
-		GTMLoggerDebug(@"loc + len = %d, dataBufferLength = %d", range.location + range.length, dataBufferLength);
-#endif
-        
-        NSAssert((range.location + range.length) <= dataBufferLength, @"Need to have a range that is within the size of the buffer");
-        
-#ifdef EXTRA_DEBUG
-        GTMLoggerDebug(@"memmove (%d, %d, %d)", range.location, range.location+range.length, dataBufferLength-(range.length + range.location));
-#endif
-        memmove (dataBuffer + range.location, 
-                 dataBuffer + (range.location + range.length),
-                 dataBufferLength - (range.location + range.length));
-        dataBufferLength -= range.length;
+    NSData *data = [self getDataWithRange:range];
+    [self discardDataWithRange:range];
+    return data;
+}
 
-		return data;
-	}
+-(void)discardDataWithRange:(NSRange)range; {
+    NSUInteger rangeEnd = range.location + range.length;
+    NSAssert(rangeEnd <= dataBufferLength, @"Need to have a range that is within the size of the buffer");
+    if (rangeEnd != dataBufferLength) {
+        memmove (dataBuffer + range.location, 
+                 dataBuffer + rangeEnd,
+                 dataBufferLength - rangeEnd);
+    }
+    dataBufferLength -= range.length;
+    memset(dataBuffer + dataBufferLength, 0, range.length);
 }
 
 -(void)removeAllData
 {
-	@synchronized(self) {
-		dataBufferLength = 0;
-	}
+    dataBufferLength = 0;
 }
 
 

@@ -16,32 +16,30 @@
 @interface OHMPositionalBuffer : NSObject {
 	id sourceDelegate;
 	id consumerDelegate;
-	BOOL waitingForMoreData;
 	OHMData *buffer;
-	
 }
 
 -(id)init;
 -(id)initWithData:(NSData*)data;
 -(void)addData:(NSData*)data;
 
--(NSData*)getDataFromCurrentPosition:(UInt64)numBytes error:(NSError**)err;
--(NSData*)peekDataFromCurrentPosition:(UInt64)numBytes error:(NSError **)err;
+-(NSData*)getDataFromCurrentPosition:(NSUInteger)numBytes error:(NSError**)err;
+-(NSData*)peekDataFromCurrentPosition:(NSUInteger)numBytes error:(NSError **)err;
 
--(BOOL)jumpPosition:(UInt64)numBytes;
--(void)getMoreData:(UInt64)length_;
+-(BOOL)jumpPosition:(NSUInteger)numBytes;
+-(void)getMoreData:(NSUInteger)length_;
 
-@property (nonatomic, retain) id<OHMPositionalBufferSourceDelegate> sourceDelegate;
-@property (nonatomic, retain) id<OHMPositionalBufferConsumerDelegate> consumerDelegate;
-@property (nonatomic, readonly) UInt64 length;
+@property (retain) id<OHMPositionalBufferSourceDelegate> sourceDelegate;
+@property (retain) id<OHMPositionalBufferConsumerDelegate> consumerDelegate;
+@property (readonly) NSUInteger length;
 
 @end
 
 @protocol OHMPositionalBufferSourceDelegate<NSObject>
 
 @optional
--(void)buffer:(OHMPositionalBuffer*)buf needMoreData:(UInt64)bytes;
--(void)buffer:(OHMPositionalBuffer*)buf jumpToPosition:(UInt64)position;
+-(void)buffer:(OHMPositionalBuffer*)buf needMoreData:(NSUInteger)bytes;
+-(void)buffer:(OHMPositionalBuffer*)buf jumpToPosition:(NSUInteger)position;
 @end
 
 

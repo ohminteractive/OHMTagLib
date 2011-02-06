@@ -24,7 +24,7 @@
 {
 	NSData *data = [NSData dataWithBytes:"abc123" length:6];
 	[buffer addData:data];
-	STAssertEquals((UInt64)6, [buffer length], @"Size should be 6 was %d!", [buffer length]);
+	STAssertEquals(6U, [buffer length], @"Size should be 6 was %d!", [buffer length]);
 }
 
 -(void)testAddAndRead
@@ -33,15 +33,15 @@
 	[buffer addData:data];
 	
 	NSData *d1 = [buffer getDataFromCurrentPosition:2 error:nil];
-	STAssertEquals((NSUInteger)2, [d1 length], @"Size mismatch!");
-	STAssertEquals((UInt64)6, [buffer length], @"Size mismatch!");
+	STAssertEquals(2U, [d1 length], @"Size mismatch!");
+	STAssertEquals(6U, [buffer length], @"Size mismatch!");
 	
 	NSData *cmp = [NSData dataWithBytes:"ab" length:2];
 	STAssertTrue([d1 isEqualToData:cmp], @"Data is not what I was expecting!");
 	
 	d1 = [buffer getDataFromCurrentPosition:6 error:nil];
-	STAssertEquals((NSUInteger)6, [d1 length], @"Size mismatch!");
-	STAssertEquals((UInt64)0, [buffer length], @"Size mismatch!");
+	STAssertEquals(6U, [d1 length], @"Size mismatch!");
+	STAssertEquals(0U, [buffer length], @"Size mismatch!");
 	
 	cmp = [NSData dataWithBytes:"cd1234" length:6];
 	STAssertTrue([d1 isEqualToData:cmp], @"Data is not what I was expecting! d1 = %s", [d1 bytes]);
@@ -62,10 +62,10 @@
 	STAssertNil(d1, @"We should get nil from here!");
 }
 
--(void)buffer:(OHMPositionalBuffer *)buf needMoreData:(UInt64)bytes
+-(void)buffer:(OHMPositionalBuffer *)buf needMoreData:(NSUInteger)bytes
 {
 	needMoreData = YES;
-	STAssertEquals((UInt64)1, bytes, @"We expected to get just one more byte here!");
+	STAssertEquals(1U, bytes, @"We expected to get just one more byte here!");
 }
 
 -(void)testGotNeedMoreData
@@ -81,7 +81,7 @@
 	[buffer addData:data];
 
 	[buffer jumpPosition:3];
-	STAssertEquals((UInt64)5, [buffer length], @"Buffer should be truncated to 5 bytes!");
+	STAssertEquals(5U, [buffer length], @"Buffer should be truncated to 5 bytes!");
 	
 	NSData *d1 = [buffer getDataFromCurrentPosition:5 error:nil];
 	NSData *cmp = [NSData dataWithBytes:"d1234" length:5];
@@ -89,9 +89,9 @@
 	STAssertTrue([d1 isEqualToData:cmp], @"The buffer should contain d1234 but contains %s", [d1 bytes]);
 }
 
--(void)buffer:(OHMPositionalBuffer *)buf jumpToPosition:(UInt64)position
+-(void)buffer:(OHMPositionalBuffer *)buf jumpToPosition:(NSUInteger)position
 {
-	STAssertEquals((UInt64)10, position, @"Expected to jump to position 10!");
+	STAssertEquals(2U, position, @"Expected to jump to position 2!");
 	jumpToPos = YES;
 }
 
@@ -109,7 +109,7 @@
 -(void)bufferHaveMoreData:(OHMPositionalBuffer *)buf
 {
 	STAssertEqualObjects(buf, buffer, @"We didn't get our buffer!");
-	STAssertEquals((UInt64)8, [buf length], @"Expected 8 bytes in buffer!");
+	STAssertEquals(8U, [buf length], @"Expected 8 bytes in buffer!");
 	consumerHaveMoreData = YES;
 }
 
@@ -135,15 +135,15 @@
 -(void)testJumpReturnWithDelegate
 {
 	buffer.sourceDelegate = self;
-	BOOL ret = [buffer jumpPosition:10];
+	BOOL ret = [buffer jumpPosition:2];
 	STAssertTrue(ret, @"Since we have an delegate that responds we should be allowed to jump!");
 }
 
 -(void)testEmptyBufferAfterJump
 {
 	buffer.sourceDelegate = self;
-	[buffer jumpPosition:10];
-	STAssertEquals((UInt64)0, [buffer length], @"The buffer should be empty after a jump!");
+	[buffer jumpPosition:2];
+	STAssertEquals(0U, [buffer length], @"The buffer should be empty after a jump!");
 }
 
 -(void)testMoreDataAfterJump
@@ -153,7 +153,7 @@
 	
 	/* this should make sure that haveMoreDataAvailable is called when
 	 * we add data to the buffer */
-	[buffer jumpPosition:10];
+	[buffer jumpPosition:2];
 	[buffer addData:[NSData dataWithBytes:"abc12345" length:8]];
 	STAssertTrue(consumerHaveMoreData, @"haveMoreData never called!");
 	
@@ -165,7 +165,7 @@
     NSData *peek = [buffer peekDataFromCurrentPosition:3 error:nil];
     NSData *abc = [NSData dataWithBytes:"abc" length:3];
     STAssertTrue([abc isEqualToData:peek], @"Bah, something is wrong with peek...");
-    STAssertEquals([buffer length], (UInt64)6, @"We should have 6 bytes left in the buffer");
+    STAssertEquals(6U, [buffer length], @"We should have 6 bytes left in the buffer");
 }
 
 -(void)tearDown
