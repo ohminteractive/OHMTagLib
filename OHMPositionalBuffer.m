@@ -87,13 +87,10 @@
 {
 	@synchronized(buffer) {
 		[buffer addData:data];
-		
-		if (waitingForMoreData) {
-			if ([consumerDelegate respondsToSelector:@selector(bufferHaveMoreData:)]) {
-				[consumerDelegate bufferHaveMoreData:self];
-			}
-			waitingForMoreData = NO;
-		}
+        if ([consumerDelegate respondsToSelector:@selector(bufferHaveMoreData:)]) {
+            [consumerDelegate bufferHaveMoreData:self];
+        }
+        waitingForMoreData = NO;
 	}
 }
 
@@ -102,7 +99,7 @@
 	@synchronized(buffer) {
 		if ([buffer length] < numBytes) {
 			if ([sourceDelegate respondsToSelector:@selector(buffer:jumpToPosition:)]) {
-				[sourceDelegate buffer:self jumpToPosition:numBytes];
+				[sourceDelegate buffer:self jumpToPosition:numBytes - [buffer length]];
 				/* reset buffer */
 				[buffer removeAllData];
 				waitingForMoreData = YES;

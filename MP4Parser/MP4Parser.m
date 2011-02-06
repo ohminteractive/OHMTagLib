@@ -93,21 +93,30 @@
 	return dta;
 }
 
--(void)parseMeta:(MP4Atom*)ilstAtom
+-(BOOL)parseMeta:(int)atomSize
 {
 	BOOL metaDone = NO;
-	
-	NSData *d = [readBuffer getDataFromCurrentPosition:ilstAtom.size error:nil];
-	if (!d || [d length] < ilstAtom.size) {
-		GTMLoggerDebug(@"No dice...");
-		return;
-	}
+	if ([readBuffer length] < atomSize) {
+        GTMLoggerDebug(@"Waiting for more data in the parseMeta function");
+        [readBuffer getMoreData:atomSize - [readBuffer length]];
+        return NO;
+    }
+    
+    NSData *d = [readBuffer getDataFromCurrentPosition:atomSize error:nil];
+    if ([d length] != atomSize) {
+        GTMLoggerDebug(@"Problem, was expecting %d, but got %d", atomSize, [d length]);
+        return NO;
+    }
 		
 	OHMPositionalBuffer *buf = [OHMPositionalBuffer new];
 	[buf addData:d];
 	
 	while (!metaDone) {
 		MP4Atom *atom = [MP4Atom getAtomFromData:[buf getDataFromCurrentPosition:kOHMMP4AtomHeaderSize error:nil] error:nil];
+        if (atom.size > [buf length]) {
+            GTMLoggerDebug(@"Crash and burn...");
+            metaDone = YES;
+        }
         
         NSString *dataString = nil;
         if (atom.type == kOHMMP4AtomALBUM ||
@@ -144,6 +153,8 @@
             [dataString release];
         }
         
+        GTMLoggerDebug(@"buffer length = %d", [buf length]);
+        
         if ([buf length] < kOHMMP4AtomHeaderSize) {
             metaDone = YES;
             GTMLoggerDebug(@"artist = %@, album = %@, year = %@, title = %@", 
@@ -154,10 +165,17 @@
         }
 	}
     [buf release];
+    
+    if (metaDone) {
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 -(void)parseAtoms
 {
+    GTMLoggerDebug(@"in parseAtoms");
     if (done) {
         return;
     }
@@ -166,46 +184,54 @@
 		nextAtom = kOHMMP4AtomMOOV;
 	}
 	
-	MP4Atom *atom = [self getAtom:nextAtom];
-	if (!atom) {
-		GTMLoggerDebug(@"no atom, we need to wait for data...");
-		return;
-	}
+    if (nextAtom != -1) {
+        MP4Atom *atom = [self getAtom:nextAtom];
+        if (!atom) {
+            GTMLoggerDebug(@"no atom, we need to wait for data...");
+            return;
+        }
 	
-	if (atom.type != nextAtom) {
-		GTMLoggerError(@"getAtom returned the wrong type");
-		return;
-	}
+        if (atom.type != nextAtom) {
+            GTMLoggerError(@"getAtom returned the wrong type");
+            return;
+        }
 	
-	switch (atom.type) {
-		case kOHMMP4AtomMOOV:
-			nextAtom = kOHMMP4AtomUDAT;
-			break;
-		case kOHMMP4AtomUDAT:
-			nextAtom = kOHMMP4AtomMETA;
-			break;
-		case kOHMMP4AtomMETA:
-			{
-				/* skip some crap */
-				[readBuffer getDataFromCurrentPosition:4 error:nil];
+        switch (atom.type) {
+            case kOHMMP4AtomMOOV:
+                nextAtom = kOHMMP4AtomUDAT;
+                break;
+            case kOHMMP4AtomUDAT:
+                nextAtom = kOHMMP4AtomMETA;
+                break;
+            case kOHMMP4AtomMETA:
+                {
+                    /* skip some crap */
+                    [readBuffer getDataFromCurrentPosition:4 error:nil];
 				
-				nextAtom = kOHMMP4AtomILST;
-				break;
-			}
-		case kOHMMP4AtomILST:
-			{
-				[self parseMeta:atom];
-                done = YES;
-                GTMLoggerDebug(@"We are done with metadata.. let's quit");
-                if ([delegate respondsToSelector:@selector(parser:doneWithMetadata:)]) {
-                    [delegate parser:self doneWithMetadata:metaData];
+                    nextAtom = kOHMMP4AtomILST;
+                    break;
                 }
-                return;
+            case kOHMMP4AtomILST:
+			{
+                nextAtom = -1;
+                iLSTSize = atom.size;
+                break;
 			}
-		default:
-			GTMLoggerError(@"Unexpected atom!");
-			break;
-	}
+            default:
+                GTMLoggerError(@"Unexpected atom!");
+                break;
+        }
+    }else {
+        GTMLoggerDebug(@"nextAtom == -1, let's parseMeta data");
+        if ([self parseMeta:iLSTSize]) {
+            done = YES;
+            GTMLoggerDebug(@"We are done with metadata.. let's quit");
+            if ([delegate respondsToSelector:@selector(parser:doneWithMetadata:)]) {
+                [delegate parser:self doneWithMetadata:metaData];
+            }
+        }
+        return;
+    }
 	
 	/* recurse */
 	if (!done) {

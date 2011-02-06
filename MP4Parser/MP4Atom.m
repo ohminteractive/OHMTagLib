@@ -110,7 +110,11 @@ static struct atomTypes_t typeMap[] = {
 	MP4Atom *atom = [[[MP4Atom alloc] init] autorelease];
 	atom.size = [MP4Atom getAtomSize:data_];
 	atom.type = [MP4Atom getAtomType:data_];
-	
+    
+    char tmpBuf[8];
+    [data_ getBytes:tmpBuf length:8];
+    GTMLoggerDebug(@"%c %c %c %c %c %c %c %c", tmpBuf[0], tmpBuf[1], tmpBuf[2], tmpBuf[3], tmpBuf[4], tmpBuf[5], tmpBuf[6], tmpBuf[7]);
+    
 	GTMLoggerDebug(@"Got atom with size %d and type %@ (%d)", atom.size, atom.typeName, atom.type);
 	
 	return atom;

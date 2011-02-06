@@ -25,6 +25,7 @@
 @private
 	OHMPositionalBuffer *readBuffer;
 	int nextAtom;
+    int iLSTSize;
 	OHMTagLibMetadata *metaData;
     id delegate;
 }
