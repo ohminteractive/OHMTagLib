@@ -109,6 +109,57 @@
 	STAssertFalse(ret, @"Should be false since we don't expand this data!");
 }
 
+-(void)testRemoveAllData
+{
+    NSData *d = [NSData dataWithBytes:"abc123" length:6];
+    [data addData:d];
+    
+    [data removeAllData];
+    NSData *d2 = [data getData];
+    STAssertEquals([d2 length], (NSUInteger)0, @"We shouldn't be able to read data now!");
+}
+
+-(void)testPopOOB
+{
+    NSData *d = [NSData dataWithBytes:"abc123" length:6];
+    [data addData:d];
+    
+    BOOL gotAssert = NO;
+    
+    @try {
+        [data popDataWithRange:NSMakeRange(0, 7)];
+    } @catch (NSException *e) {
+        gotAssert = YES;
+    }
+    
+    STAssertTrue(gotAssert, @"we should have gotten an assert");
+}
+
+-(void)testPopWholeBuffer
+{
+    NSData *d = [NSData dataWithBytes:"abc123" length:6];
+    [data addData:d];
+    
+    NSData *d2 = [data popDataWithRange:NSMakeRange(0, 6)];
+    STAssertTrue([d2 isEqualToData:d], @"we should have abc123");
+}
+
+-(void)testRemoveAddReallocRead
+{
+    NSData *d = [NSData dataWithBytes:"abc123" length:6];
+    [data addData:d];
+    
+    NSData *d2 = [data getDataWithRange:NSMakeRange(0, 3)];
+    [data removeAllData];
+
+	char chars[200];
+	memset (chars, 'b', 200);
+	d = [NSData dataWithBytes:chars length:200];
+    [data addData:d];
+    d2 = [data getDataWithRange:NSMakeRange(100, 10)];
+    STAssertTrue([d2 isEqualToData:[NSData dataWithBytes:"bbbbbbbbbb" length:10]], @"we should have 10 bs here");
+}
+
 -(void)tearDown
 {
 	[data release];
