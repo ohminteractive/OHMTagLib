@@ -9,7 +9,7 @@
 #import "OHMData.h"
 #import "GTMLogger.h"
 
-//#define EXTRA_DEBUG
+#define EXTRA_DEBUG
 
 @implementation OHMData
 
@@ -126,16 +126,17 @@
 #ifdef EXTRA_DEBUG
 		GTMLoggerDebug(@"loc + len = %d, dataBufferLength = %d", range.location + range.length, dataBufferLength);
 #endif
-		if ((range.location + range.length) <= dataBufferLength) {
-			/* move the memory */
+        
+        NSAssert((range.location + range.length) <= dataBufferLength, @"Need to have a range that is within the size of the buffer");
+        
 #ifdef EXTRA_DEBUG
-			GTMLoggerDebug(@"memmove (%d, %d, %d)", range.location, range.location+range.length, dataBufferLength-(range.length + range.location));
+        GTMLoggerDebug(@"memmove (%d, %d, %d)", range.location, range.location+range.length, dataBufferLength-(range.length + range.location));
 #endif
-			memmove (dataBuffer + range.location, 
-					 dataBuffer + (range.location + range.length),
-					 dataBufferLength - (range.location + range.length));
-			dataBufferLength -= range.length;
-		}
+        memmove (dataBuffer + range.location, 
+                 dataBuffer + (range.location + range.length),
+                 dataBufferLength - (range.location + range.length));
+        dataBufferLength -= range.length;
+
 		return data;
 	}
 }
