@@ -35,6 +35,7 @@
 		6120374312FEA4BC009900D2 /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372D12FEA4BC009900D2 /* GTMUnitTestDevLog.m */; };
 		6120374512FEA4D9009900D2 /* GTMGarbageCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120374412FEA4D9009900D2 /* GTMGarbageCollection.h */; };
 		6120374712FEA538009900D2 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120374612FEA538009900D2 /* GTMIPhoneUnitTestMain.m */; };
+		6120374A12FEDDE9009900D2 /* TestAsyncParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120374912FEDDE8009900D2 /* TestAsyncParser.m */; };
 		6137878B12F1A6B60080E063 /* TestOHMTagLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6137878A12F1A6B60080E063 /* TestOHMTagLib.m */; };
 		6137878C12F1AB130080E063 /* MP4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186469712BF23DA008A71DF /* MP4.m */; };
 		6153D53412B62D9900820448 /* OHMTagLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 6153D53212B62D9900820448 /* OHMTagLib.h */; };
@@ -108,6 +109,8 @@
 		6120372D12FEA4BC009900D2 /* GTMUnitTestDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMUnitTestDevLog.m; path = GTM/GTMUnitTestDevLog.m; sourceTree = "<group>"; };
 		6120374412FEA4D9009900D2 /* GTMGarbageCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMGarbageCollection.h; path = GTM/GTMGarbageCollection.h; sourceTree = "<group>"; };
 		6120374612FEA538009900D2 /* GTMIPhoneUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMIPhoneUnitTestMain.m; path = GTM/GTMIPhoneUnitTestMain.m; sourceTree = "<group>"; };
+		6120374812FEDDE8009900D2 /* TestAsyncParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAsyncParser.h; sourceTree = "<group>"; };
+		6120374912FEDDE8009900D2 /* TestAsyncParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAsyncParser.m; sourceTree = "<group>"; };
 		6137878912F1A6B60080E063 /* TestOHMTagLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOHMTagLib.h; sourceTree = "<group>"; };
 		6137878A12F1A6B60080E063 /* TestOHMTagLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOHMTagLib.m; sourceTree = "<group>"; };
 		6153D53212B62D9900820448 /* OHMTagLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMTagLib.h; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 				61630E5D12E3DD9800220C32 /* TestOHMData.m */,
 				618BB70312E68FF20053CE07 /* TestMP4Parser.h */,
 				618BB70412E68FF20053CE07 /* TestMP4Parser.m */,
+				6120374812FEDDE8009900D2 /* TestAsyncParser.h */,
+				6120374912FEDDE8009900D2 /* TestAsyncParser.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -516,6 +521,7 @@
 				6120374012FEA4BC009900D2 /* GTMSenTestCase.m in Sources */,
 				6120374312FEA4BC009900D2 /* GTMUnitTestDevLog.m in Sources */,
 				6120374712FEA538009900D2 /* GTMIPhoneUnitTestMain.m in Sources */,
+				6120374A12FEDDE9009900D2 /* TestAsyncParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
