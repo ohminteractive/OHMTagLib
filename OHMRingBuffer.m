@@ -84,7 +84,7 @@
 -(BOOL)addData:(NSData *)data waitForFreeSpace:(BOOL)wait
 {
     if ([data length] > self.storageSize) {
-        NSAssert(NO, @"You tried to write something to the ringbuffer that doesn't fit.");
+        NSAssert(NO, @"You tried to write something to the ringbuffer that doesn't fit %d > %d.", [data length], self.storageSize);
     }
         
     [freeCondition lock];
@@ -104,6 +104,14 @@
     [usedCondition broadcast];
         
     return YES;
+}
+
+-(void)removeAllData
+{
+    @synchronized(self) {
+        [storage removeAllData];
+    }
+    [freeCondition broadcast];
 }
 
 -(void)dealloc

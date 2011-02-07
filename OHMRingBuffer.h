@@ -28,6 +28,6 @@
 -(id)initWithStorageSize:(NSUInteger)size;
 -(NSData*)popData:(NSUInteger)bytes waitForData:(BOOL)wait;
 -(BOOL)addData:(NSData*)data waitForFreeSpace:(BOOL)wait;
-
+-(void)removeAllData;
 
 @end
