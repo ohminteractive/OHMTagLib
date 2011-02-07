@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		61059E5A12D47799004A7FAE /* TestPositionalBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61059E5112D4763F004A7FAE /* TestPositionalBuffer.m */; };
 		61059E6612D477BC004A7FAE /* libOHMTagLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libOHMTagLib.a */; };
 		611CEAEE12CB5C1C0000A197 /* MP4Atom.h in Headers */ = {isa = PBXBuildFile; fileRef = 611CEAEC12CB5C1C0000A197 /* MP4Atom.h */; };
 		611CEAEF12CB5C1C0000A197 /* MP4Atom.m in Sources */ = {isa = PBXBuildFile; fileRef = 611CEAED12CB5C1C0000A197 /* MP4Atom.m */; };
@@ -35,8 +34,6 @@
 		6120374312FEA4BC009900D2 /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372D12FEA4BC009900D2 /* GTMUnitTestDevLog.m */; };
 		6120374512FEA4D9009900D2 /* GTMGarbageCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120374412FEA4D9009900D2 /* GTMGarbageCollection.h */; };
 		6120374712FEA538009900D2 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120374612FEA538009900D2 /* GTMIPhoneUnitTestMain.m */; };
-		6120374A12FEDDE9009900D2 /* TestAsyncParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120374912FEDDE8009900D2 /* TestAsyncParser.m */; };
-		6137878B12F1A6B60080E063 /* TestOHMTagLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6137878A12F1A6B60080E063 /* TestOHMTagLib.m */; };
 		6137878C12F1AB130080E063 /* MP4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186469712BF23DA008A71DF /* MP4.m */; };
 		6153D53412B62D9900820448 /* OHMTagLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 6153D53212B62D9900820448 /* OHMTagLib.h */; };
 		6153D53512B62D9900820448 /* OHMTagLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6153D53312B62D9900820448 /* OHMTagLib.m */; };
@@ -51,16 +48,16 @@
 		6153D6C412B63E2600820448 /* xmms2_id3v2.h in Headers */ = {isa = PBXBuildFile; fileRef = 6153D6B412B63D4F00820448 /* xmms2_id3v2.h */; };
 		615B70D612E7FADC00D5CC34 /* testm4a.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 615B70D412E7FADC00D5CC34 /* testm4a.m4a */; };
 		615B70D712E7FADC00D5CC34 /* testmp3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 615B70D512E7FADC00D5CC34 /* testmp3.mp3 */; };
-		61630E5E12E3DD9800220C32 /* TestOHMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 61630E5D12E3DD9800220C32 /* TestOHMData.m */; };
 		6186466112BF1FE6008A71DF /* OHMTagLibMetadataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186465E12BF1FE6008A71DF /* OHMTagLibMetadataRequest.m */; };
 		6186466212BF1FE6008A71DF /* OHMTagLibMetadataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186465F12BF1FE6008A71DF /* OHMTagLibMetadataRequest.h */; };
 		6186466312BF1FE6008A71DF /* OHMTagLibErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186466012BF1FE6008A71DF /* OHMTagLibErrorCodes.h */; };
 		6186466D12BF212A008A71DF /* OHMTagLib_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6186466C12BF212A008A71DF /* OHMTagLib_Prefix.pch */; };
-		618BB70512E68FF20053CE07 /* TestMP4Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 618BB70412E68FF20053CE07 /* TestMP4Parser.m */; };
 		61B8D48812DB138300A2F63F /* OHMData.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B8D48612DB138300A2F63F /* OHMData.h */; };
 		61B8D48912DB138300A2F63F /* OHMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B8D48712DB138300A2F63F /* OHMData.m */; };
 		61B8D48A12DB138300A2F63F /* OHMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B8D48712DB138300A2F63F /* OHMData.m */; };
-		61B92C2912D0DC7F00208864 /* Test_MP4Atom.m in Sources */ = {isa = PBXBuildFile; fileRef = 611CEB2212CB6C2A0000A197 /* Test_MP4Atom.m */; };
+		61BAA1F113003866009BA6CA /* OHMRingBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 61BAA1EF13003866009BA6CA /* OHMRingBuffer.h */; };
+		61BAA1F213003866009BA6CA /* OHMRingBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BAA1F013003866009BA6CA /* OHMRingBuffer.m */; };
+		61BAA1FC13004870009BA6CA /* TestOHMRingBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BAA1FB13004870009BA6CA /* TestOHMRingBuffer.m */; };
 		61C4635212D21ABF00830F36 /* OHMPositionalBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 61C4635012D21ABF00830F36 /* OHMPositionalBuffer.h */; };
 		61C4635312D21ABF00830F36 /* OHMPositionalBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4635112D21ABF00830F36 /* OHMPositionalBuffer.m */; };
 		61D8AABF12CBA673006C6A54 /* MP4Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D8AABC12CBA673006C6A54 /* MP4Parser.h */; };
@@ -141,6 +138,10 @@
 		61B8D48712DB138300A2F63F /* OHMData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHMData.m; sourceTree = "<group>"; };
 		61B92BFD12D0DB6A00208864 /* UnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B92BFF12D0DB6B00208864 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
+		61BAA1EF13003866009BA6CA /* OHMRingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMRingBuffer.h; sourceTree = "<group>"; };
+		61BAA1F013003866009BA6CA /* OHMRingBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHMRingBuffer.m; sourceTree = "<group>"; };
+		61BAA1FA13004870009BA6CA /* TestOHMRingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOHMRingBuffer.h; sourceTree = "<group>"; };
+		61BAA1FB13004870009BA6CA /* TestOHMRingBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOHMRingBuffer.m; sourceTree = "<group>"; };
 		61C4635012D21ABF00830F36 /* OHMPositionalBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMPositionalBuffer.h; sourceTree = "<group>"; };
 		61C4635112D21ABF00830F36 /* OHMPositionalBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHMPositionalBuffer.m; sourceTree = "<group>"; };
 		61D8AABC12CBA673006C6A54 /* MP4Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4Parser.h; sourceTree = "<group>"; };
@@ -251,6 +252,8 @@
 				618BB70412E68FF20053CE07 /* TestMP4Parser.m */,
 				6120374812FEDDE8009900D2 /* TestAsyncParser.h */,
 				6120374912FEDDE8009900D2 /* TestAsyncParser.m */,
+				61BAA1FA13004870009BA6CA /* TestOHMRingBuffer.h */,
+				61BAA1FB13004870009BA6CA /* TestOHMRingBuffer.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -274,6 +277,8 @@
 				61C4635112D21ABF00830F36 /* OHMPositionalBuffer.m */,
 				61B8D48612DB138300A2F63F /* OHMData.h */,
 				61B8D48712DB138300A2F63F /* OHMData.m */,
+				61BAA1EF13003866009BA6CA /* OHMRingBuffer.h */,
+				61BAA1F013003866009BA6CA /* OHMRingBuffer.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 				6120373E12FEA4BC009900D2 /* GTMSenTestCase.h in Headers */,
 				6120374112FEA4BC009900D2 /* GTMUnitTestDevLog.h in Headers */,
 				6120374512FEA4D9009900D2 /* GTMGarbageCollection.h in Headers */,
+				61BAA1F113003866009BA6CA /* OHMRingBuffer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,12 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61B92C2912D0DC7F00208864 /* Test_MP4Atom.m in Sources */,
-				61059E5A12D47799004A7FAE /* TestPositionalBuffer.m in Sources */,
 				61B8D48A12DB138300A2F63F /* OHMData.m in Sources */,
-				61630E5E12E3DD9800220C32 /* TestOHMData.m in Sources */,
-				618BB70512E68FF20053CE07 /* TestMP4Parser.m in Sources */,
-				6137878B12F1A6B60080E063 /* TestOHMTagLib.m in Sources */,
 				6120373112FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.m in Sources */,
 				6120373412FEA4BC009900D2 /* GTMLogger.m in Sources */,
 				6120373712FEA4BC009900D2 /* GTMLoggerRingBufferWriter.m in Sources */,
@@ -521,7 +522,7 @@
 				6120374012FEA4BC009900D2 /* GTMSenTestCase.m in Sources */,
 				6120374312FEA4BC009900D2 /* GTMUnitTestDevLog.m in Sources */,
 				6120374712FEA538009900D2 /* GTMIPhoneUnitTestMain.m in Sources */,
-				6120374A12FEDDE9009900D2 /* TestAsyncParser.m in Sources */,
+				61BAA1FC13004870009BA6CA /* TestOHMRingBuffer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +547,7 @@
 				6120373C12FEA4BC009900D2 /* GTMRegex.m in Sources */,
 				6120373F12FEA4BC009900D2 /* GTMSenTestCase.m in Sources */,
 				6120374212FEA4BC009900D2 /* GTMUnitTestDevLog.m in Sources */,
+				61BAA1F213003866009BA6CA /* OHMRingBuffer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
