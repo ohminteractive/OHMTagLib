@@ -62,6 +62,12 @@
 		61C4635312D21ABF00830F36 /* OHMPositionalBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4635112D21ABF00830F36 /* OHMPositionalBuffer.m */; };
 		61D8AABF12CBA673006C6A54 /* MP4Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D8AABC12CBA673006C6A54 /* MP4Parser.h */; };
 		61D8AAC012CBA673006C6A54 /* MP4Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D8AABD12CBA673006C6A54 /* MP4Parser.m */; };
+		61DA390C13016B1800958CE9 /* TestOHMTagLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6137878A12F1A6B60080E063 /* TestOHMTagLib.m */; };
+		61DA390D13016B1800958CE9 /* Test_MP4Atom.m in Sources */ = {isa = PBXBuildFile; fileRef = 611CEB2212CB6C2A0000A197 /* Test_MP4Atom.m */; };
+		61DA390E13016B1800958CE9 /* TestPositionalBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61059E5112D4763F004A7FAE /* TestPositionalBuffer.m */; };
+		61DA390F13016B1800958CE9 /* TestOHMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 61630E5D12E3DD9800220C32 /* TestOHMData.m */; };
+		61DA391013016B1800958CE9 /* TestMP4Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 618BB70412E68FF20053CE07 /* TestMP4Parser.m */; };
+		61DA391113016B1800958CE9 /* TestAsyncParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120374912FEDDE8009900D2 /* TestAsyncParser.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -523,6 +529,12 @@
 				6120374312FEA4BC009900D2 /* GTMUnitTestDevLog.m in Sources */,
 				6120374712FEA538009900D2 /* GTMIPhoneUnitTestMain.m in Sources */,
 				61BAA1FC13004870009BA6CA /* TestOHMRingBuffer.m in Sources */,
+				61DA390C13016B1800958CE9 /* TestOHMTagLib.m in Sources */,
+				61DA390D13016B1800958CE9 /* Test_MP4Atom.m in Sources */,
+				61DA390E13016B1800958CE9 /* TestPositionalBuffer.m in Sources */,
+				61DA390F13016B1800958CE9 /* TestOHMData.m in Sources */,
+				61DA391013016B1800958CE9 /* TestMP4Parser.m in Sources */,
+				61DA391113016B1800958CE9 /* TestAsyncParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +592,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OHMTagLib_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = OHMTagLib;
 			};
@@ -594,6 +607,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OHMTagLib_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = OHMTagLib;
 			};
