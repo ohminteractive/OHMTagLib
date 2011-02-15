@@ -10,32 +10,32 @@
 		61059E6612D477BC004A7FAE /* libOHMTagLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libOHMTagLib.a */; };
 		611CEAEE12CB5C1C0000A197 /* MP4Atom.h in Headers */ = {isa = PBXBuildFile; fileRef = 611CEAEC12CB5C1C0000A197 /* MP4Atom.h */; };
 		611CEAEF12CB5C1C0000A197 /* MP4Atom.m in Sources */ = {isa = PBXBuildFile; fileRef = 611CEAED12CB5C1C0000A197 /* MP4Atom.m */; };
-		6120372E12FEA4BC009900D2 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120371F12FEA4BC009900D2 /* GTMDefines.h */; };
-		6120372F12FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372012FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.h */; };
+		6120372E12FEA4BC009900D2 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120371F12FEA4BC009900D2 /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6120372F12FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372012FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6120373012FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372112FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.m */; };
 		6120373112FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372112FEA4BC009900D2 /* GTMIPhoneUnitTestDelegate.m */; };
-		6120373212FEA4BC009900D2 /* GTMLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372212FEA4BC009900D2 /* GTMLogger.h */; };
+		6120373212FEA4BC009900D2 /* GTMLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372212FEA4BC009900D2 /* GTMLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6120373312FEA4BC009900D2 /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372312FEA4BC009900D2 /* GTMLogger.m */; };
 		6120373412FEA4BC009900D2 /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372312FEA4BC009900D2 /* GTMLogger.m */; };
-		6120373512FEA4BC009900D2 /* GTMLoggerRingBufferWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372412FEA4BC009900D2 /* GTMLoggerRingBufferWriter.h */; };
+		6120373512FEA4BC009900D2 /* GTMLoggerRingBufferWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372412FEA4BC009900D2 /* GTMLoggerRingBufferWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6120373612FEA4BC009900D2 /* GTMLoggerRingBufferWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372512FEA4BC009900D2 /* GTMLoggerRingBufferWriter.m */; };
 		6120373712FEA4BC009900D2 /* GTMLoggerRingBufferWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372512FEA4BC009900D2 /* GTMLoggerRingBufferWriter.m */; };
-		6120373812FEA4BC009900D2 /* GTMObjC2Runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372612FEA4BC009900D2 /* GTMObjC2Runtime.h */; };
+		6120373812FEA4BC009900D2 /* GTMObjC2Runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372612FEA4BC009900D2 /* GTMObjC2Runtime.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6120373912FEA4BC009900D2 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372712FEA4BC009900D2 /* GTMObjC2Runtime.m */; };
 		6120373A12FEA4BC009900D2 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372712FEA4BC009900D2 /* GTMObjC2Runtime.m */; };
-		6120373B12FEA4BC009900D2 /* GTMRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372812FEA4BC009900D2 /* GTMRegex.h */; };
+		6120373B12FEA4BC009900D2 /* GTMRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372812FEA4BC009900D2 /* GTMRegex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6120373C12FEA4BC009900D2 /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372912FEA4BC009900D2 /* GTMRegex.m */; };
 		6120373D12FEA4BC009900D2 /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372912FEA4BC009900D2 /* GTMRegex.m */; };
-		6120373E12FEA4BC009900D2 /* GTMSenTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372A12FEA4BC009900D2 /* GTMSenTestCase.h */; };
+		6120373E12FEA4BC009900D2 /* GTMSenTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372A12FEA4BC009900D2 /* GTMSenTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6120373F12FEA4BC009900D2 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372B12FEA4BC009900D2 /* GTMSenTestCase.m */; };
 		6120374012FEA4BC009900D2 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372B12FEA4BC009900D2 /* GTMSenTestCase.m */; };
-		6120374112FEA4BC009900D2 /* GTMUnitTestDevLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372C12FEA4BC009900D2 /* GTMUnitTestDevLog.h */; };
+		6120374112FEA4BC009900D2 /* GTMUnitTestDevLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120372C12FEA4BC009900D2 /* GTMUnitTestDevLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6120374212FEA4BC009900D2 /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372D12FEA4BC009900D2 /* GTMUnitTestDevLog.m */; };
 		6120374312FEA4BC009900D2 /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120372D12FEA4BC009900D2 /* GTMUnitTestDevLog.m */; };
-		6120374512FEA4D9009900D2 /* GTMGarbageCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120374412FEA4D9009900D2 /* GTMGarbageCollection.h */; };
+		6120374512FEA4D9009900D2 /* GTMGarbageCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6120374412FEA4D9009900D2 /* GTMGarbageCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6120374712FEA538009900D2 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6120374612FEA538009900D2 /* GTMIPhoneUnitTestMain.m */; };
 		6137878C12F1AB130080E063 /* MP4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186469712BF23DA008A71DF /* MP4.m */; };
-		6153D53412B62D9900820448 /* OHMTagLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 6153D53212B62D9900820448 /* OHMTagLib.h */; };
+		6153D53412B62D9900820448 /* OHMTagLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 6153D53212B62D9900820448 /* OHMTagLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6153D53512B62D9900820448 /* OHMTagLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6153D53312B62D9900820448 /* OHMTagLib.m */; };
 		6153D53C12B62E0800820448 /* ID3v2.h in Headers */ = {isa = PBXBuildFile; fileRef = 6153D53A12B62E0800820448 /* ID3v2.h */; };
 		6153D53D12B62E0800820448 /* ID3v2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6153D53B12B62E0800820448 /* ID3v2.m */; };
@@ -49,7 +49,7 @@
 		615B70D612E7FADC00D5CC34 /* testm4a.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 615B70D412E7FADC00D5CC34 /* testm4a.m4a */; };
 		615B70D712E7FADC00D5CC34 /* testmp3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 615B70D512E7FADC00D5CC34 /* testmp3.mp3 */; };
 		6186466112BF1FE6008A71DF /* OHMTagLibMetadataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186465E12BF1FE6008A71DF /* OHMTagLibMetadataRequest.m */; };
-		6186466212BF1FE6008A71DF /* OHMTagLibMetadataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186465F12BF1FE6008A71DF /* OHMTagLibMetadataRequest.h */; };
+		6186466212BF1FE6008A71DF /* OHMTagLibMetadataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186465F12BF1FE6008A71DF /* OHMTagLibMetadataRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6186466312BF1FE6008A71DF /* OHMTagLibErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6186466012BF1FE6008A71DF /* OHMTagLibErrorCodes.h */; };
 		6186466D12BF212A008A71DF /* OHMTagLib_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6186466C12BF212A008A71DF /* OHMTagLib_Prefix.pch */; };
 		61B8D48812DB138300A2F63F /* OHMData.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B8D48612DB138300A2F63F /* OHMData.h */; };
@@ -339,6 +339,7 @@
 		61B92BEB12D0DA7400208864 /* GTM */ = {
 			isa = PBXGroup;
 			children = (
+				6120372D12FEA4BC009900D2 /* GTMUnitTestDevLog.m */,
 				6120374612FEA538009900D2 /* GTMIPhoneUnitTestMain.m */,
 				6120374412FEA4D9009900D2 /* GTMGarbageCollection.h */,
 				6120371F12FEA4BC009900D2 /* GTMDefines.h */,
@@ -355,7 +356,6 @@
 				6120372A12FEA4BC009900D2 /* GTMSenTestCase.h */,
 				6120372B12FEA4BC009900D2 /* GTMSenTestCase.m */,
 				6120372C12FEA4BC009900D2 /* GTMUnitTestDevLog.h */,
-				6120372D12FEA4BC009900D2 /* GTMUnitTestDevLog.m */,
 			);
 			name = GTM;
 			sourceTree = "<group>";
